@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>党建考试系统</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #333;
+            background: #fff;
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .content {
+            padding: 1px 0.2rem;
+            margin: 1rem 0;
+
+        }
+
+        .tishu {
+            color: #999;
+            font-size: 0.24rem;
+            line-height: 1rem;
+            position: absolute;
+            right: 0.2rem;
+        }
+
+        .tishu > img {
+            width: 0.25rem;
+            height: 0.25rem;
+            margin-right: 0.1rem;
+        }
+
+        .my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            color: #fff;
+            margin: 0.4rem auto 0;
+        }
+
+        .question_title {
+            font-size: 0.32rem;
+            line-height: 0.5rem;
+            color: #666;
+        }
+
+        ul.questions_ul {
+            margin-bottom: 2rem;
+            min-height: 3.95rem;
+        }
+
+        ul.questions_ul > li {
+            display: none;
+        }
+
+        .question_lab {
+            width: 1.2rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            margin: 0.4rem 0 0.4rem -0.2rem;
+            text-align: center;
+            color: #fff;
+            border-bottom-right-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+        }
+
+        ul.answer_ul {
+            font-size: 0.32rem;
+            color: #333;
+            line-height: 1rem;
+        }
+
+        ul.answer_ul > li > span {
+            width: 0.5rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            text-align: center;
+            color: #333;
+            display: inline-block;
+            border-radius: 0.25rem;
+            background: #fff;
+            margin-right: 0.25rem;
+            box-shadow: 0 0 0.1rem #e6e6e6;
+        }
+
+        .answer_checked {
+            color: #fff !important;
+            background: #1095fc !important;
+        }
+
+        .btn_bottom {
+            text-align: center;
+        }
+
+        .btn_bottom > div:first-child > span {
+            display: inline-block;
+            height: 0.6rem;
+            width: 1.6rem;
+            line-height: 0.6rem;
+            border-radius: 0.3rem;
+            color: #333;
+            background: #fff;
+            box-shadow: 0 0 0.1rem #e6e6e6;
+            margin: 0 0.3rem;
+        }
+        .mark_tis {
+            display: none;
+            z-index: 1001;
+            position: fixed;
+            top: 0;
+            width: 7.5rem;
+            height: 20rem;
+            background: rgba(0,0,0,0.2);
+        }
+
+        ul.tis_list {
+            background: #fff;
+            box-shadow: 0 0 0.2rem #e6e6e6;
+            width: 3rem;
+            float: right;
+            overflow: scroll;
+        }
+        ul.tis_list > li {
+            line-height: 0.8rem;
+            font-size: 0.35rem;
+            border-bottom: 1px solid #e6e6e6;
+            text-align: center;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span><img style="width: 0.3rem;height: 0.3rem;margin-right: 0.1rem;" src="image/dyzx_djksxt_ks_time.png">倒计时 60:00</span>
+        <span class="tishu"><img src="image/dyzx_djksxt_ks_tishu.png"><span>1/100</span></span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <!--只填这里  题目列表-->
+        <ul class="questions_ul">
+            <li data-index="0">
+                <div class="question_lab">单选题</div>
+                <div class="question_title">1.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="1">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">2.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="2">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">3.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="3">
+                <div class="question_lab">单选题</div>
+                <div class="question_title">4.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="4">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">5.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="5">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">6.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="6">
+                <div class="question_lab">单选题</div>
+                <div class="question_title">7.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="7">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">8.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="8">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">9.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="9">
+                <div class="question_lab">单选题</div>
+                <div class="question_title">10.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="10">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">11.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+            <li data-index="11">
+                <div class="question_lab">多选题</div>
+                <div class="question_title">12.中国共产党党员是_____中的有共产主义觉悟的先锋战士</div>
+                <ul class="answer_ul">
+                    <li><span>A</span>立国之本、执政之基、力量之源</li>
+                    <li><span>B</span>立国之本、执政之基、科技强国</li>
+                    <li><span>C</span>立国之本、执政之基、强国之源</li>
+                    <li><span>D</span>立国之本、强国之基、力量之源</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="btn_bottom">
+            <div><span onclick="question_prev()">上一题</span> <span onclick="question_next()">下一题</span></div>
+            <div class="my_button">提交答案</div>
+        </div>
+    </div>
+
+    <div class="mark_tis">
+        <div>
+            <span class="tishu" style="position: unset;display: block;width: 3rem;margin-left: 4.5rem;background: linear-gradient(to right, #48aefd, #1095fc);text-align: center;color: #fff;"><img src="image/syzx_djksxt_ks_tishu1.png"><span>1/100</span></span>
+            <ul class="tis_list"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script>
+    //当前提数
+    var question_index = 0;
+    //总提数
+    var question_sum = $("ul.questions_ul > li").length;
+    //答案
+    var answers = {};
+
+    $(".tis_list").css("height",document.documentElement.clientHeight-parseInt($('html').css("fontSize")))
+    $(".mark_tis").css("height",document.documentElement.clientHeight)
+
+    //显示对应题目
+    function showThis(index) {
+        $("ul.questions_ul > li").hide();
+        $($("ul.questions_ul > li")[index]).fadeIn(500) ;
+        question_index = index;
+        changeTopIndex()
+    }
+    //改变当前题数
+    function changeTopIndex() {
+        $(".tishu").find("span").text(question_index+1 + "/" + question_sum)
+    }
+
+    //初始化显示
+    showThis(question_index);
+
+    //上一题
+    function question_prev() {
+        if (question_index > 0) {
+            showThis(--question_index)
+        }else {
+            alert('此题已到第一题')
+        }
+    }
+    //下一题
+    function question_next() {
+        if (question_index < question_sum-1) {
+            showThis(++question_index)
+        }else {
+            alert('此题已到最后题')
+        }
+    }
+
+    //重构列表显示未做和以做题
+    initTis();
+    function initTis() {
+        $("ul.tis_list").empty();
+        for (let i = 1; i <= question_sum; i++) {
+
+            if (i-1 in answers) {
+                $("ul.tis_list").append("<li onclick='tis_list(event)'>"+i+"</li>")
+            }else {
+                $("ul.tis_list").append("<li onclick='tis_list(event)' style='color: #fff;background:#f1604a;'>"+i+"</li>")
+            }
+        }
+    }
+
+    //点击
+    $("ul.answer_ul > li").on("click",function () {
+        $(this).siblings().find("span").removeClass("answer_checked");
+        $(this).find("span").addClass("answer_checked");
+
+        let index = $(this).parent().parent()[0].dataset["index"];
+        answers[index] = $(this).find("span").text()
+
+        initTis();
+    });
+
+    $(".tishu").on("click",function () {
+        $(".mark_tis").fadeIn(500);
+    })
+
+    $(".mark_tis").on("click",function () {
+        $(".mark_tis").fadeOut(200);
+    })
+
+    function tis_list(event) {
+        let _this = event.target;
+        showThis(parseInt($(_this).text())-1);
+    }
+
+    $(".my_button").on("click",function () {
+        alert(JSON.stringify(answers))
+    })
+</script>
+</body>
+
+</html>

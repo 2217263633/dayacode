@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>预约办事</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .content img {
+            width: 1.76rem;
+            height: 1.76rem;
+            margin-top: 1.44rem;
+        }
+        .sub_text{
+            margin-top: 0.2rem;
+            color: #333;
+            font-size: 0.36rem;
+            line-height: 0.7rem;
+        }
+        .hind_text {
+            font-size: 0.28rem;
+            color: #666;
+            line-height: 0.5rem;
+        }
+        .hind_text a {
+            color: #1095fc;
+            text-decoration: underline;
+        }
+
+        #my_button {
+            width: 2.8rem;
+            height: 0.6rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.6rem;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(to left,#1095fc ,#48aefd);
+            /*background: #e6e6e6;*/
+            /*color: #999;*/
+            margin: 1rem auto 0;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>预约办事</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <img src="image/public_wyrd_success_banner.png" style="width: 7.1rem;height: 2.4rem;margin: unset;">
+        
+        <img src="image/yybs_success_ture_2x.png">
+
+        <div class="sub_text">提交成功</div>
+
+        <div class="hind_text">
+            已交于系统工作人员审核<br>
+            您可以在个人中心<a href="">我的办事进度</a>中查询相关进度
+        </div>
+
+        <div id="my_button">返回首页</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+</body>
+
+</html>

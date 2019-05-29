@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>党建资讯</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="js/swiper4/css/swiper.min.css">
+    <link rel="stylesheet" href="js/swiper4/css/animate.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .content_title {
+            font-size: 0.32rem;
+            line-height: 0.6rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .content_hind {
+            font-size: 0.24rem;
+            color: #999;
+            line-height: 0.4rem;
+            margin: 0.1rem 0;
+        }
+
+        .author {
+            font-size: 0.22rem;
+            color: #999;
+            line-height: 0.4rem;
+        }
+
+        p {
+            font-size: 0.28rem;
+            color: #666;
+            line-height: 0.5rem;
+            text-indent: 0.56rem;
+            margin-top: 0.2rem;
+        }
+
+        .content_value {
+            padding-bottom: 0.4rem;
+            border-bottom: 0.1rem solid #f4f4f4;
+        }
+
+        .discuss_title {
+            color: #000;
+            font-size: 0.24rem;
+            font-weight: bold;
+            line-height: 1rem;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .discuss_item {
+            padding: 0.4rem 0 0.28rem 0;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .user_head {
+            width: 0.6rem;
+            height: 0.6rem;
+            border-radius: 0.3rem;
+        }
+
+        .user_name {
+            font-size: 0.24rem;
+            color: #999;
+            line-height: 0.6rem;
+        }
+
+        .item_praise {
+            font-size: 0.24rem;
+            color: #999;
+            float: right;
+            line-height: 0.6rem;
+        }
+
+        .item_reply {
+            font-size: 0.24rem;
+            color: #999;
+            float: right;
+            line-height: 0.6rem;
+        }
+
+        .item_praise img {
+            width: 0.24rem;
+            height: 0.24rem;
+            margin-left: 0.2rem;
+            vertical-align: text-top;
+        }
+
+        .item_reply img {
+            width: 0.24rem;
+            height: 0.24rem;
+            margin-left: 0.2rem;
+        }
+
+        .item_value {
+            font-size: 0.24rem;
+            line-height: 0.33rem;
+            color: #000;
+            margin-left: 0.6rem;
+        }
+
+        .item_reply_item {
+            margin: 0.2rem 0 0 0.6rem;
+            background: #f4f4f4;
+            padding: 0.2rem;
+        }
+
+        .mask {
+            display: none;
+            position: fixed;
+            top: 0;
+            filter: alpha(opacity=60);
+            background-color: rgba(102, 102, 102, 0.5);
+            z-index: 1002;
+            left: 0;
+        }
+
+        .edit_reply {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            width: 7.5rem;
+            height: 1.9rem;
+            background: #fff;
+            border-top-left-radius: 0.2rem;
+            border-top-right-radius: 0.2rem;
+            z-index: 1002;
+        }
+
+        .edit_reply_photo {
+            width: 0.4rem;
+            height: 0.34rem;
+            margin-left: 0.26rem;
+        }
+
+        .edit_reply_submit {
+            float: right;
+            color: #999;
+            font-size: 0.28rem;
+            line-height: 0.9rem;
+            margin-right: 0.26rem;
+        }
+
+        .reply_index {
+            position: fixed;
+            bottom: 0;
+            color: #fff;
+            height: 1rem;
+            width: 100%;
+            background: #fff;
+            font-size: 0.28rem;
+            z-index: 1000;
+            border-top: 1px solid #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>党建资讯</span>
+    </div>
+
+
+    <!--内容-->
+    <div class="content">
+        <div class="content_value">
+            <div class="content_title">
+                习近平：做好本职工作 扫黑除恶 建设和谐社会
+            </div>
+            <div class="content_hind">
+                2019年01月03日 来源：共产党员网
+            </div>
+            <div style="width: 7.1rem;height: 1px;background:#e6e6e6;"></div>
+
+            <p>《政府工作报告》中提到，要对各类所有制企业平等对待。构建新型政商关系，健全政企沟通机制，激发企业家精神，促进民营经济发展升级。要努力打造良好的营商环境，让企业家安心搞经营、放心办企业。对于报告中提到的构建新型政商关系，肖友才深有体会，完全赞同。他提到，以前很多例子都可以说明，各级党委政府主要领导干部在跟民营企业打交道当中，很多人都很怕，怕什么？怕说东道西。但是只要我们心灵是干净的，就无所畏惧，就可以一门心思去为企业创造良好的发展环境</p>
+            <img style="width: 7.1rem;height: 3.4rem;margin: 0.28rem 0;" src="image/sign_background.png">
+            <div class="author">2018年4月9日，陈冯富珍在博鳌亚洲论坛2018年年会“新一轮技术革命</div>
+            <p>肖友才说，李克强总理的报告体现了政府进一步深化改革、简政放权、减税降费的毅力与决心，将更大程度提振民营经济发展的信心，提升民营企业的获得感和安全感，助推经济健康发展。</p>
+        </div>
+
+        <div class="discuss">
+            <div class="discuss_title">
+                评论 656
+                <span style="margin-left: 0.4rem;font-weight: normal;">赞</span>
+            </div>
+
+            <div class="discuss_list">
+                <!--整条回复discuss_item-->
+                <div class="discuss_item" data-index="0">
+                    <div>
+                        <img class="user_head" src="image/sign_background.png">
+                        <span class="user_name">小特喵</span>
+
+                        <span class="item_reply">
+                            <img src="image/public_rdzx_detail_reply.png">回复
+                        </span>
+                        <span class="item_praise">
+                            <img src="image/public_rdzx_detail_praise.png">120
+                        </span>
+                    </div>
+                    <div class="item_value">
+                        虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。习近平到宁德工作时，她才两岁多。一颗颗当年种下的扶贫种子，如今开花结果。
+                    </div>
+
+                    <!--item_reply_item 回复消息-->
+                    <div class="item_reply_item">
+                        <img class="user_head" src="image/sign_background.png">
+                        <span class="user_name">小特喵</span>
+                        <div class="item_value">
+                            虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。习近平到宁德工作时，她才两岁多。一颗颗当年种下的扶贫种子，如今开花结果。
+                        </div>
+                    </div>
+                    <div class="item_reply_item">
+                        <img class="user_head" src="image/sign_background.png">
+                        <span class="user_name">小特喵</span>
+                        <div class="item_value">
+                            虽然这是岁多。一颗颗当年种下的扶贫种子，如今开花结果。
+                        </div>
+                    </div>
+                </div>
+                <div class="discuss_item" data-index="1">
+                    <div>
+                        <img class="user_head" src="image/sign_background.png">
+                        <span class="user_name">小特喵</span>
+
+                        <span class="item_reply">
+                            <img src="image/public_rdzx_detail_reply.png">回复
+                        </span>
+                        <span class="item_praise">
+                            <img src="image/public_rdzx_detail_praise.png">120
+                        </span>
+                    </div>
+                    <div class="item_value">
+                        虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。习近平到宁德工作时，她才两岁多。一颗颗当年种下的扶贫种子，如今开花结果。
+                    </div>
+
+                    <!--item_reply_item 回复消息-->
+                    <div class="item_reply_item">
+                        <img class="user_head" src="image/sign_background.png">
+                        <span class="user_name">小特喵</span>
+                        <div class="item_value">
+                            虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。习近平到宁德工作时，她才两岁多。一颗颗当年种下的扶贫种子，如今开花结果。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--评论-->
+    <div class="reply_index">
+        <input style="width: 6.3rem;height: 0.6rem;line-height: 0.6rem;margin-top: 0.2rem;background: #f4f4f4;color: #000;" type="text"
+               placeholder="说点什么...">
+        <img style="width: 0.3rem;height: 0.3rem;margin-left: 0.2rem;" src="image/public_rdzx_detail_writing.png" alt="">
+    </div>
+
+    <!--回复评论-->
+    <div id="mask" class="mask"></div>
+    <div class="edit_reply">
+        <div style="height: 0.99rem;">
+            <input style="width: 6.94rem;height: 0.99rem;line-height: 0.99rem;background: #fff;color: #000;" type="text"
+                   placeholder="说点什么...">
+        </div>
+        <div style="height: 1px;background:#f4f4f4;"></div>
+        <div style="height: 0.9rem;line-height: 0.9rem;">
+            <img class="edit_reply_photo" src="image/public_rdzx_detail_picture.png">
+            <input style="display: none" type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+            <span class="edit_reply_submit">发布</span>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/swiper4/js/swiper.min.js"></script>
+<script src="js/swiper4/js/swiper.animate.min.js"></script>
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    $(".discuss_title span").on('click', function () {
+        if ($(this).css('color').toString() === 'rgb(0, 0, 0)') {
+            $(this).css('color', '#1296fc')
+
+            alert('赞');
+        } else {
+            $(this).css('color', '#000')
+            alert('取消');
+        }
+    })
+
+    $(".item_praise").on("click", function () {
+
+        let index = $(this).parent().parent()[0].dataset['index'];
+
+        if ($(this).css('color').toString() === 'rgb(153, 153, 153)') {
+            $(this).css('color', '#1296fc');
+            $(this).find('img').attr("src", "image/public_rdzx_detail_praise2.png")
+
+            alert('赞' + index);
+        } else {
+            $(this).css('color', '#999');
+            $(this).find('img').attr("src", "image/public_rdzx_detail_praise.png")
+
+            alert('取消' + index);
+        }
+
+    })
+
+    $(".item_reply").on("click", function () {
+        //显示
+        showMask();
+
+        //赋值 回复那条评论
+        let index = $(this).parent().parent()[0].dataset['index'];
+        $(".edit_reply")[0].dataset['index'] = index;
+    });
+
+    $("#mask").on('click', function () {
+        $("#mask").hide();
+        $(".edit_reply").hide();
+    });
+
+    $(".edit_reply").on('click', function () {
+        //禁止冒泡
+        event = event ? event : window.event;
+        event.cancelBubble = true;
+    });
+
+    function showMask() {
+        $("#mask").css("height", $(document).height());
+        $("#mask").css("width", $(document).width());
+        $("#mask").show();
+        $(".edit_reply").show();
+    }
+
+    $(".edit_reply_photo").on('click',function () {
+        $(this).next().click()
+    });
+</script>
+</body>
+
+</html>

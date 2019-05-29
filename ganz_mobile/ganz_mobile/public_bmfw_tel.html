@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>常用电话</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+
+        }
+
+        input[type='text'] {
+            width: 5.2rem;
+            height: 0.8rem;
+            font-size: 0.28rem;
+            border-radius: 0.04rem;
+            margin: 0.2rem 0.95rem;
+            background: #f4f4f4;
+            position: absolute;
+        }
+
+        #my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            /*color: #fff;*/
+            /*background: linear-gradient(to left,#1095fc ,#48aefd);*/
+            background: #e6e6e6;
+            color: #999;
+            margin: 1.3rem auto 0;
+        }
+
+        ul {
+            position: absolute;
+            z-index: 991;
+            display: none;
+            width: 5.2rem;
+            margin: 1.18rem 0 0 0.95rem;
+            background: #fff;
+            box-shadow: 0 0 0.4rem #e6e6e6;
+            border-radius: 0.1rem;
+            text-indent: 0.24rem;
+            padding: 0.15rem 0;
+            font-size: 0.28rem;
+            line-height: 0.5rem;
+            border: 1px solid #d2d2d2;
+        }
+
+        ul li {
+            border-bottom: 1px solid #fff;
+        }
+
+        .checked_li {
+            color: #fff;
+            background: #1095fc;
+        }
+
+        .join_name_top {
+            position: absolute;
+            border: 0.15rem solid #fff;
+            border-color: transparent transparent #d8d8d8 transparent;
+            z-index: 991;
+            margin: 0.9rem 0 0 5.64rem;
+            display: none;
+            box-shadow: 0 0 0.2rem #e6e6e6;
+        }
+
+        .sanjiao {
+            font-size: 0.38rem;
+            position: absolute;
+            margin: 0.45rem 0 0 5.6rem;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>常用电话</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <img style="width: 2.56rem;height: 2.51rem;display: block;margin: auto;" src="image/bmfw_tel_top_2x.png" alt="">
+
+        <div style="height: 1.2rem;position: relative;">
+            <input name="code" type="text" placeholder="请选择常用电话类型" readonly>
+            <div class="el-icon-arrow-down sanjiao"></div>
+            <div class="join_name_top"></div>
+            <ul>
+                <li class="checked_li">请选择</li>
+                <li>类型1</li>
+                <li>类型2</li>
+                <li>类型3</li>
+            </ul>
+        </div>
+
+        <div style="height: 1.2rem;position: relative;">
+            <input name="tel" type="text" placeholder="请选择电话机构" readonly>
+            <div class="el-icon-arrow-down sanjiao"></div>
+            <div class="join_name_top"></div>
+            <ul>
+                <li class="checked_li">请选择</li>
+                <li>110</li>
+                <li>120</li>
+                <li>130</li>
+            </ul>
+        </div>
+
+        <div id="my_button"><img style="width: 0.36rem;height: 0.36rem;margin-right: 0.1rem;" src="image/bmfw_sbcx_search_2x.png">查询电话</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+
+    $("input[type='text']").on('click',function () {
+        $(this).parent().find('.join_name_top').toggle();
+        $(this).parent().find('ul').toggle();
+    });
+
+    $("li").on('click',function () {
+        let _this = this
+        let DOM = $('#my_button');
+
+        setTimeout(function () {
+            $(_this).parent().parent().find('.join_name_top').toggle();
+            $(_this).parent().parent().find('ul').toggle();
+        },100)
+
+        $(this).addClass('checked_li');
+        $(this).siblings().attr('class','');
+
+        if ($(this).text()==='请选择') {
+            $(this).parent().parent().find('input').val('');
+            DOM.css('background', '#e6e6e6');
+            DOM.css('color', '#999');
+        }else {
+            //文字变换
+            $(this).parent().parent().find('input').val($(this).text());
+
+            let code = $("input[name='code']").val();
+            let tel = $("input[name='tel']").val();
+            //校验值
+            console.log(code + tel)
+            if (code && tel) {
+                //不为空
+                DOM.css('background', 'linear-gradient(to left,#1095fc ,#48aefd)');
+                DOM.css('color', '#fff');
+            } else {
+                DOM.css('background', '#e6e6e6');
+                DOM.css('color', '#999');
+            }
+        }
+    })
+
+    $("#my_button").on('click',function () {
+        let code = $("input[name='code']").val();
+        let tel = $("input[name='tel']").val();
+
+        if ($(this).css('color').toString()=== 'rgb(255, 255, 255)') {
+            alert('提交：' +code + tel)
+        }else {
+            alert('请选择完整信息')
+        }
+    })
+</script>
+</body>
+
+</html>

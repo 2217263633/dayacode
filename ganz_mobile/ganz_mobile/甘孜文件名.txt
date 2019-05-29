@@ -1,0 +1,75 @@
+dyzx_djksxt_index.html     		党建中心-党建考试系统
+dyzx_djksxt_ks.html			    党建中心-党建考试系统-考试
+dyzx_djksxt_lscj_detail_ct.html	党建中心-党建考试系统-历史成绩-详情-错题
+dyzx_djksxt_lscj_detail.html 	党建中心-党建考试系统-历史成绩-详情
+dyzx_djksxt_lscj.html			党建中心-党建考试系统-历史成绩
+
+dyzx_djzx_index.html			党建中心-党建资讯-首页
+dyzx_djzx_detail.html			党建中心-党建资讯-详情
+
+dyzx_gbmydcp_detail.html		党建中心-干部满意度测评-详情
+dyzx_gbmydcp_index.html			党建中心-干部满意度测评-首页
+
+dyzx_index.html				    党建中心-首页
+
+dyzx_tztg_detail.html 			党建中心-通知通告-详情
+dyzx_tztg_list.html			    党建中心-通知通告-列表
+
+personal_detail_edit.html		个人中心-用户信息-编辑资料
+personal_history_foot.html		个人中心-我的足迹
+personal_index.html			    个人中心-首页
+personal_leave_message.html		个人中心-我要留言
+personal_login_forget.html		个人中心-忘记密码
+personal_login_login.html		个人中心-登陆
+personal_login_regisyer.html	个人中心-修改密码
+personal_message.html			个人中心-我的消息
+personal_study.html			    个人中心-我要学习
+personal_wdbsjd.html			个人中心-我的办事进度
+personal_wdsc.html			    个人中心-我的收藏
+personal_wggl_my_detail.html	个人中心-网格管理-我的-详情
+personal_wggl_wjlb_detail.html  个人中心-网格管理-未接受列表-详情
+personal_wggl.html			    个人中心-网格管理
+
+
+public_bmfw_dbzc_detail.html	公共服务-便民服务-低保政策-详情
+public_bmfw_dbzc.html			公共服务-便民服务-低保政策
+public_bmfw_index.html			公共服务-便民服务-首页
+public_bmfw_sbcx.html			公共服务-便民服务-社保查询
+public_bmfw_tel.html			公共服务-便民服务-电话查询
+public_bmfw_wgfw.html			公共服务-便民服务-创建网格服务
+public_bmfw_yybs_success.html	公共服务-便民服务-预约办事-成功
+public_bmfw_yybs.html			公共服务-便民服务-预约办事
+public_index.html			    公共服务-首页
+public_jqcx_detail.html			公共服务-景区查询-景区详情
+public_jqcx_select.html			公共服务-景区查询
+public_ldbz_xxgk.html			公共服务-领导班子-信息公开
+public_ldbz_xxgk_detail.html	公共服务-领导班子-信息公开-详情
+public_mlgz_gzgk.html			公共服务-美丽甘孜-甘孜概况
+public_mlgz_index.html			公共服务-美丽甘孜-首页
+public_mlgz_lyzx_detail.html	公共服务-美丽甘孜-旅游咨询-详情
+public_mlgz_lyzx_list.html		公共服务-美丽甘孜-旅游咨询-列表
+public_rdzx_detail.html			公共服务-热点资讯-详情
+public_rdzx_index.html			公共服务-热点资讯-首页
+public_wyrd.html			    公共服务-我要入党
+public_wyrd_grjl.html			公共服务-我要入党-个人经历
+public_wyrd_jbxx.html			公共服务-我要入党-基本信息
+public_wyrd_jtqk.html			公共服务-我要入党-家庭概况
+public_wyrd_rdyy.html			公共服务-我要入党-入党原因
+public_wyrd_success.html		公共服务-我要入党-成功
+public_xxyd_index.html			公共服务-学习园地-首页
+public_xxyd_spkj.html			公共服务-学习园地-视频课件
+public_xxyd_spkj_detail.html	公共服务-学习园地-视频课件-详情
+public_xxyd_twkj.html			公共服务-学习园地-图文课件
+public_xxyd_twkj_detail.html	公共服务-学习园地-图文课件-详情
+public_xxyd_xxt.html			公共服务-学习园地-学习堂
+public_xxyd_zxzb.html			公共服务-学习园地-在线直播
+public_zbds_cyhh.html			公共服务-支部电商-村有好货
+public_zbds_dszx.html			公共服务-支部电商-电商资讯
+public_zbds_dszx_detail.html	公共服务-支部电商-电商资讯-详情
+public_zbds_index.html			公共服务-支部电商-首页
+public_zyhd_index.html			公共服务-志愿活动-首页
+public_zyhd_join.html 			公共服务-志愿活动-参加活动
+public_zyhd_zxys.html           公共服务-在线仪事
+public_zyhd_zxys_xq.html      公共服务-在线仪事-详情
+
+

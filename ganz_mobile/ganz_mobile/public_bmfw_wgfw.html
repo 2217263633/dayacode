@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>网格服务</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+
+        }
+        .bs_title {
+            font-size: 0.42rem;
+            line-height: 0.6rem;
+            font-weight: bold;
+            color: #666;
+            margin: 0.4rem 0;
+        }
+        .bs_title a {
+            color: #139afc;
+            font-size: 0.28rem;
+            font-weight: normal;
+            float: right;
+        }
+
+
+        .lab {
+            font-size: 0.28rem;
+            color: #666;
+            line-height: 0.5rem;
+        }
+        input[type=text] {
+            width: 7.1rem;
+            height: 0.8rem;
+            margin: 0 auto 0.4rem;
+        }
+
+        textarea {
+            width: 6.3rem;
+            height: 2.6rem;
+            margin: 0 auto 0.4rem;
+            font-size: 0.28rem;
+            border: unset;
+            color: #333;
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+        }
+
+        #my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            /*color: #fff;*/
+            /*background: linear-gradient(to left,#1095fc ,#48aefd);*/
+            background: #e6e6e6;
+            color: #999;
+            margin: 0.4rem auto 0;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>网格服务</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <div class="bs_title">创建网格服务事项 <a href="#">我的网格服务>></a></div>
+
+        <div class="lab">办事项目</div>
+        <input name="bsxm" type="text" value="社保政策">
+
+        <div class="lab">事项详情</div>
+        <textarea name="sxxq" placeholder="请输入事项详情"></textarea>
+
+        <div class="lab">姓名</div>
+        <input name="xm" type="text" placeholder="请输入姓名" value="">
+
+        <div class="lab">联系方式</div>
+        <input name="lxfs" type="text" placeholder="请输入联系方式" value="">
+
+        <div id="my_button">确认提交</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    //初始化办事项目的值 url 中的 key=''
+    let r = window.location.search.substr(1).match(new RegExp("(^|&)" + 'key' + "=([^&]*)(&|$)"));
+    if (r !== null){
+        $('input[name=bsxm]').val(decodeURI(r[2]));
+    }
+
+    function button() {
+        let bsxm = $("input[name='bsxm']").val();
+        let sxxq = $("textarea[name='sxxq']").val();
+        let xm   = $("input[name='xm']").val();
+        let lxfs = $("input[name='lxfs']").val();
+        let DOM = $('#my_button');
+
+        if (bsxm && sxxq && xm && lxfs) {
+            //不为空
+            DOM.css('background','linear-gradient(to left,#1095fc ,#48aefd)');
+            DOM.css('color','#fff');
+        }else {
+            DOM.css('background','#e6e6e6');
+            DOM.css('color','#999');
+        }
+    }
+
+    $("input[type='text']").bind('input propertychange',button);
+    $("textarea").bind('input propertychange',button);
+
+    $("#my_button").on('click',function () {
+        let bsxm = $("input[name='bsxm']").val();
+        let sxxq = $("textarea[name='sxxq']").val();
+        let xm   = $("input[name='xm']").val();
+        let lxfs = $("input[name='lxfs']").val();
+
+        if ($(this).css('color').toString()=== 'rgb(255, 255, 255)') {
+            alert('提交：' +bsxm + sxxq + xm + lxfs)
+            //成功跳转
+            go('public_bmfw_yybs_success.html')
+        }else {
+            alert('请输入完整信息')
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>干部满意度测评</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+
+        }
+
+        .boss {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 0.1rem solid #f4f4f4;
+            padding-bottom: 0.3rem;
+        }
+
+        .boss > img {
+            width: 2.2rem;
+            height: 3rem;
+        }
+
+        .boss > div {
+            width: 4.7rem;
+            height: 4rem;
+        }
+
+        .boss > div > div {
+            font-size: 0.32rem;
+            font-weight: bold;
+            line-height: 0.4rem;
+        }
+
+        .boss > div > span {
+            display: block;
+            width: 1.3rem;
+            height: 0.4rem;
+            font-size: 0.24rem;
+            line-height: 0.4rem;
+            margin: 0.15rem 0;
+            background: #1296fc;
+            color: #fff;
+            border-radius: 0.08rem;
+            text-align: center;
+        }
+
+        .boss > div > p {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #666;
+        }
+
+        .title_name {
+            font-size: 0.32rem;
+            font-weight: bold;
+            line-height: 0.4rem;
+            margin: 0.3rem 0;
+        }
+
+        .content > p {
+            text-indent: 0.56rem;
+            font-size: 0.28rem;
+            color: #666;
+            line-height: 0.5rem;
+        }
+
+        .layui-rate {
+            padding: 0;
+        }
+
+        .layui-rate li i.layui-icon {
+            font-size: 0.36rem;
+            line-height: 0.5rem;
+        }
+
+        .start_comment {
+            text-align: center;
+            font-size: 0.28rem;
+            padding-bottom: 0.5rem;
+            margin-top: 0.3rem;
+        }
+
+        .start_comment > div > span {
+            line-height: 0.5rem;
+            display: inline-block;
+            height: 0.5rem;
+        }
+
+        textarea.text_comment {
+            font-size: 0.28rem;
+            color: #000;
+            padding: 0.2rem;
+            width: 6.7rem;
+            height: 2.5rem;
+            border: unset;
+            border-radius: 0.1rem;
+            background: #f8f8f8;
+        }
+
+        .my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            color: #fff;
+            margin: 0.4rem auto 0;
+        }
+
+        .hiding {
+            text-align: right;
+            margin-top: 0.2rem;
+        }
+
+        .hiding > span {
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            background: #f9f9f9;
+            vertical-align: middle;
+        }
+
+        .checked {
+            background-image: url("image/dyzx_gou.png") !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% 100% !important;
+            background-color: #1095fc !important;
+        }
+
+        .hiding_text {
+            display: inline-block;
+            font-size: 0.26rem;
+            color: #333333;
+            line-height: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>干部满意度测评</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <div class="boss">
+            <img src="image/sign_background.png">
+            <div>
+                <div>州政府州长：肖有才</div>
+                <span>职责分工</span>
+                <p>
+                    肖友才，男，藏族，1965年10月生，四川金川人。1986年7月参加工作，1985年11月加入中国共产党。省委党校函授学院经济管理专业毕业，党校研究生学历。现任中共甘孜州委副书记、甘孜州人民政府党组书记、州长。</p>
+            </div>
+        </div>
+
+        <div class="start_comment">
+            <div>
+                <span>描述相符</span>
+                <div id="test1"></div>
+            </div>
+            <div>
+                <span>办事效率</span>
+                <div id="test2"></div>
+            </div>
+            <div>
+                <span>服务态度</span>
+                <div id="test3"></div>
+            </div>
+        </div>
+        <textarea class="text_comment" name="text_comment" placeholder="说点什么吧（评论不超过150字" maxlength="150"></textarea>
+
+        <!--<input id="hiding" type="checkbox"><label for="hiding">匿名评价</label>-->
+        <div class="hiding">
+            <span class="checked"></span>
+            <div class="hiding_text">匿名评价</div>
+        </div>
+
+        <div class="my_button">提交评价</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script>
+    var test1 = 3,
+        test2 = 3,
+        test3 = 3,
+        //匿名默认开启
+        hiding = true;
+
+    layui.use(['rate'], function () {
+        var rate = layui.rate;
+        rate.render({
+            elem: '#test1'
+            , value: 3 //初始值
+            , text: true //开启文本
+            , theme: '#db2102'
+            , choose: function (value) {
+                test1 = value;
+            }
+        });
+        rate.render({
+            elem: '#test2'
+            , value: 3 //初始值
+            , text: true //开启文本
+            , theme: '#db2102'
+            , choose: function (value) {
+                test2 = value;
+            }
+        });
+        rate.render({
+            elem: '#test3'
+            , value: 3 //初始值
+            , text: true //开启文本
+            , theme: '#db2102'
+            , choose: function (value) {
+                test3 = value;
+            }
+        });
+    });
+
+    $(".hiding").on("click", function () {
+        if ($(this).find("span").attr("class") === "checked") {
+            $(this).find("span").removeClass("checked");
+            hiding = false;
+        } else {
+            $(this).find("span").addClass("checked");
+            hiding = true;
+        }
+    });
+
+    $(".my_button").on("click", function () {
+        alert("描述相符：" + test1 + "\n办事效率：" + test2 + "\n服务态度：" + test3 + "\n匿名评价：" + hiding + "\n评价内容：" + $("textarea[name=text_comment]").val())
+    })
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>我要留言</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .content_title {
+            color: #666;
+            font-size: 0.42rem;
+            font-weight: bold;
+            line-height: 1.4rem;
+        }
+
+        .app {
+            padding-bottom: 1rem;
+        }
+
+        .list_item {
+            padding-bottom: 0.3rem;
+            /*border-bottom: 0.08rem solid #f4f4f4;*/
+        }
+
+        .from_item {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #333;
+            border-bottom: 1px solid #f4f4f4;
+            padding: 0.2rem 0;
+        }
+
+        .item_val > span {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .item_lab {
+            width: 1.7rem;
+            display: inline-block;
+            line-height: 0.6rem;
+            color: #666;
+        }
+
+        input[type='text'] {
+            margin-left: 0;
+            background: #fff;
+            text-indent: 0;
+            height: 0.4rem;
+            line-height: 0.4rem;
+        }
+
+        #my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            /*color: #fff;*/
+            /*background: linear-gradient(to left,#1095fc ,#48aefd);*/
+            background: #e6e6e6;
+            color: #999;
+            margin: 0.4rem auto 0;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>我要留言</span>
+    </div>
+
+
+    <!--内容-->
+    <div class="content">
+        <div class="content_title">发表您的一间 建设美好甘孜</div>
+
+        <div class="list_item">
+            <!--姓名-->
+            <div class="from_item">
+                <div class="item_lab">姓名</div>
+                <input name="xm" type="text" placeholder="请输入姓名">
+            </div>
+            <!--电话-->
+            <div class="from_item">
+                <div class="item_lab">电话</div>
+                <input name="dh" type="text" placeholder="请输入关系">
+            </div>
+            <!--留言内容-->
+            <div class="from_item">
+                <div class="item_lab">留言内容</div>
+                <!--<input name="lynr" type="text" placeholder="例：1982.10.01">-->
+                <textarea name="lynr" id=""
+                          style="width: 5.1rem;height: 3.1rem;border: unset;padding: 0.2rem 0;background:#f9f9f9;"></textarea>
+            </div>
+            <!--留言时间-->
+            <div class="from_item">
+                <div class="item_lab">留言时间</div>
+                <input name="lysj" type="text" value="2019.05.03 14:22" readonly>
+            </div>
+        </div>
+    </div>
+    <div id="my_button">下一步</div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+
+    //监听是否全部输入
+    $("input[type='text']").bind('input propertychange', button);
+    $("textarea[name='lynr']").bind('input propertychange', button);
+
+
+    function button() {
+        let xm = $("input[name='xm']").val();
+        let dh = $("input[name='dh']").val();
+        let lynr = $("textarea[name='lynr']").val();
+        let lysj = $("input[name='lysj']").val();
+
+        let DOM = $('#my_button');
+
+        if (xm && dh && lynr && lysj) {
+            //不为空
+            DOM.css('background', 'linear-gradient(to left,#1095fc ,#48aefd)');
+            DOM.css('color', '#fff');
+        } else {
+            DOM.css('background', '#e6e6e6');
+            DOM.css('color', '#999');
+        }
+    }
+
+    $("#my_button").on("click", function () {
+        if ($(this).css('color') === "rgb(255, 255, 255)") {
+            let xm = $("input[name='xm']").val();
+            let dh = $("input[name='dh']").val();
+            let lynr = $("textarea[name='lynr']").val();
+            let lysj = $("input[name='lysj']").val();
+
+            alert(xm + dh + lynr + lysj)
+        } else {
+            alert('请输入详细信息');
+        }
+    })
+</script>
+</body>
+
+</html>

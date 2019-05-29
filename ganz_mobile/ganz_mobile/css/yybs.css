@@ -1,0 +1,12 @@
+/*from*/
+.layui-form {
+    margin-top: 1.3rem;
+}
+
+.layui-form-label {
+    width: unset;
+    padding: 9px 10px;
+}
+.layui-input-block {
+    margin:  0 0.2rem 0 1.8rem;
+}

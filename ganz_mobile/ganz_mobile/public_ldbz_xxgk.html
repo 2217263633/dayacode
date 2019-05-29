@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>信息公开</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+
+        }
+
+        .boss {
+            display: flex;
+            justify-content: space-between;
+        }
+        .boss>img {
+            width: 2.2rem;
+            height: 3rem;
+        }
+        .boss>div {
+            width: 4.7rem;
+            height: 4rem;
+        }
+        .boss>div>div {
+            font-size: 0.32rem;
+            font-weight: bold;
+            line-height: 0.4rem;
+        }
+        .boss>div>span {
+            display: block;
+            width: 1.3rem;
+            height: 0.4rem;
+            font-size: 0.24rem;
+            line-height: 0.4rem;
+            margin: 0.15rem 0;
+            background: #1296fc;
+            color: #fff;
+            border-radius: 0.04rem;
+            text-align: center;
+        }
+        .boss>div>p {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #666;
+        }
+        .title_name {
+            font-size: 0.32rem;
+            font-weight: bold;
+            line-height: 0.4rem;
+            margin: 0.3rem 0;
+        }
+        .officer_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .list_item {
+            height: 3.1rem;
+            width: 2.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .list_item img {
+            width: 2.1rem;
+            height: 2.6rem;
+        }
+        .list_item div {
+            font-size: 0.28rem;
+            color: #000;
+            line-height: 0.4rem;
+            margin-top: 0.1rem;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>信息公开</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <div class="boss">
+            <img src="image/sign_background.png">
+            <div>
+                <div>州政府州长：肖有才</div>
+                <span>工作简历</span>
+                <p>肖友才，男，藏族，1965年10月生，四川金川人。1986年7月参加工作，1985年11月加入中国共产党。省委党校函授学院经济管理专业毕业，党校研究生学历。现任中共甘孜州委副书记、甘孜州人民政府党组书记、州长。</p>
+            </div>
+        </div>
+
+        <div class="title_name">其他政府官员</div>
+
+        <div class="officer_list">
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某某</div>
+            </div>
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某人</div>
+            </div>
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某某</div>
+            </div>
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某某</div>
+            </div>
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某某</div>
+            </div>
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某某</div>
+            </div>
+            <div class="list_item">
+                <img src="image/sign_background.png">
+                <div>副州长·刘某某</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    $(".list_item").on("click",function () {
+        go("public_ldbz_xxgk_detail.html?key="+$(this).find("div").text())
+    })
+</script>
+</body>
+
+</html>

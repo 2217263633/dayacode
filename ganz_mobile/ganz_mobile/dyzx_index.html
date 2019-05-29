@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>党员中心首页</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/swiper4/css/swiper.min.css">
+    <link rel="stylesheet" href="js/swiper4/css/animate.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .content {
+            padding: 0 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .banner {
+            margin-top: 0.4rem;
+        }
+
+        .banner .swiper-slide span {
+            position: absolute;
+            top: 2.7rem;
+            color: #fff;
+            font-size: 0.24rem;
+            width: 7.1rem;
+            display: inline-block;
+            background: rgba(27, 27, 27, 0.4);
+            text-indent: 0.24rem;
+        }
+
+        .banner .swiper-pagination-bullet-active {
+            background: #73a6ff !important;
+        }
+
+        .banner .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 1;
+        }
+
+        .banner .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            top: 2.95rem;
+            margin-left: 2.9rem;
+        }
+
+        .nav_btn {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 6.72rem;
+            height: 2rem;
+            border-radius: 0.04rem;
+            box-shadow: 0 3px 5px #ccc;
+            margin: 0.2rem auto;
+        }
+
+        .nav_btn .nav_item {
+            width: 1.68rem;
+            height: 2rem;
+            font-size: 0.22rem;
+            line-height: 0.28rem;
+            text-align: center;
+        }
+
+        .nav_btn .nav_item img {
+            margin: 0.4rem 0 0.12rem 0;
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+
+        .message_box {
+            margin: 0.42rem 0 0 0;
+            padding-bottom: 0.32rem;
+            border-bottom: 0.1rem solid #f4f4f4;
+        }
+
+        .message_box div {
+            font-size: 0.32rem;
+            line-height: 0.45rem;
+            font-weight: bold;
+            color: #1e86cb;
+        }
+
+        .message_box div span {
+            font-size: 0.24rem;
+            color: #333;
+            line-height: 0.45rem;
+            font-weight: normal;
+        }
+
+        /* .content_value {
+            
+        } */
+
+        .content_value .content_title {
+            height: 0.98rem;
+            line-height: 0.98rem;
+            font-size: 0.32rem;
+            color: #000;
+        }
+
+        .content_value .content_title a {
+            font-size: 0.28rem;
+            color: #999;
+            float: right;
+        }
+
+        .content_value .content_banner {
+            position: relative;
+        }
+
+        .swiper_title_ul {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 2.6rem;
+            height: 3.4rem;
+            line-height: 0.38rem;
+            font-size: 0.24rem;
+            background: rgba(245,76,67,0.6);
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .swiper_title_ul li {
+            display: none;
+            padding: 0.4rem 0.26rem 0 0.26rem;
+            height: 2.4rem;
+            overflow: hidden;
+        }
+
+        .swiper_button {
+            position: absolute;
+            top: 2.9rem;
+            right: 0.26rem;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            width: 2.08rem;
+            font-size: 0.24rem;
+            color: #fff;
+            line-height: 0.38rem;
+        }
+
+        .swiper_button img  {
+            width: 0.1rem;
+            height: 0.18rem;
+        }
+
+        .content_ul {
+            border-bottom: 0.1rem solid #f4f4f4;
+            margin-top: 0.26rem;
+            padding-bottom: 0.25rem;
+        }
+        .content_ul li {
+            border-top: 1px solid #e6e6e6;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+            font-size: 0.28rem;
+            line-height: 0.35rem;
+            position: relative;
+        }
+        .content_ul li > img {
+            width: 2.3rem;
+            height: 1.54rem;
+        }
+        .content_ul li div > img {
+            width: 0.3rem;
+            height: 0.2rem;
+            margin-right: 0.1rem;
+        }
+        .content_ul li div div:first-child {
+            height: 1.1rem;
+            overflow: hidden;
+        }
+
+        .content_top_img {
+            display: flex;
+            justify-content: space-between;
+        }
+        .top_img_1 img{
+            width: 3.5rem;
+            height: 4.5rem;
+        }
+        .top_img_2 img{
+            width: 3.5rem;
+            height: 2.4rem;
+        }
+        .top_img_3 img{
+            margin-top: 0.1rem;
+            width: 3.5rem;
+            height: 2rem;
+        }
+        .top_img {
+            position: relative;
+        }
+        .top_img div {
+            position: absolute;
+            height: 0.6rem;
+            width: 3.5rem;
+            background: rgba(0,0,0,0.4);
+            bottom: 0;
+            font-size: 0.24rem;
+            line-height: 0.6rem;
+            color: #fff;
+            text-indent: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+
+    <!--内容-->
+    <div class="content">
+
+        <!--顶部bannner图-->
+        <div class="banner">
+            <div class="swiper-container swp1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="height: 3.36rem;">
+                        <img style="height: 3.36rem;" src="image/sign_background.png" alt="">
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                    <div class="swiper-slide" style="height: 3.36rem;">
+                        <img style="height: 3.36rem;" src="image/sign_background.png" alt="">
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                    <div class="swiper-slide" style="height: 3.36rem;">
+                        <img style="height: 3.36rem;" src="image/sign_background.png" alt="">
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                </div>
+                <!-- 分页器 -->
+                <div class="swiper-pagination swiper1"></div>
+            </div>
+        </div>
+
+        <div class="nav_btn">
+            <div class="nav_item" onclick="go()">
+                <img src="image/zhuzhi_2x.png" alt="">
+                <div>寻找组织</div>
+            </div>
+            <div class="nav_item" onclick="go()">
+                <img src="image/yishi_2x.png" alt="">
+                <div>在线议事</div>
+            </div>
+            <div class="nav_item" onclick="go('dyzx_gbmydcp_index.html')">
+                <img src="image/ceping_2x.png" alt="">
+                <div>干部满意度测评</div>
+            </div>
+            <div class="nav_item" onclick="go('dyzx_djksxt_index.html')">
+                <img src="image/kaoshi_2x.png" alt="">
+                <div>党建考试系统</div>
+            </div>
+        </div>
+
+        <div class="message_box" onclick="go('dyzx_tztg_list.html')">
+            <div>通知 | <span>四川代表热议'两高'工作报告为基本了解...</span></div>
+            <div><span style="font-size: 0.32rem;line-height: 0.45rem;font-weight: bold;color: #333333;">通告</span> | <span>四川代表热议'两高'工作报告阿社区卫生解...</span></div>
+        </div>
+
+        <!--党建资讯-->
+        <div class="content_value">
+            <div class="content_title">
+                <span>党建资讯</span>
+                <a href="dyzx_djzx_index.html">更多 <img src="image/path1_2x.png" style="width: 0.1rem;height: 0.18rem;vertical-align:unset;"></a>
+            </div>
+            <div class="content_banner">
+                <!-- Swiper滚动 -->
+                <div class="swiper-container swp2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="height: 3.4rem;">
+                            <img src="image/sign_background.png">
+                        </div>
+                        <div class="swiper-slide" style="height: 3.4rem;">
+                            <img src="image/sign_background.png">
+                        </div>
+                        <div class="swiper-slide" style="height: 3.4rem;">
+                            <img src="image/sign_background.png">
+                        </div>
+                        <div class="swiper-slide" style="height: 3.4rem;">
+                            <img src="image/sign_background.png">
+                        </div>
+                    </div>
+                </div>
+                <ul class="swiper_title_ul">
+                    <li style="display: block"><span>甘孜人民政府召开第17次会议1</span></li>
+                    <li><span>甘孜人民政府召开第17次会议撒大大声大声大声达2</span></li>
+                    <li><span>甘孜人民政府召开第17次会议3</span></li>
+                    <li><span>甘孜人民政府召开第17次会议4</span></li>
+                </ul>
+                <div style="width: 1.8rem;height: 1px;background: #fff;position: absolute;right: 0.4rem;top: 2.8rem;z-index: 2;"></div>
+                <div class="swiper_button">
+                    <div class="button_prev"><img src="image/left_2x.png"></div>
+                    <div class="swiper_page"></div>
+                    <div class="button_next"><img src="image/right_2x.png"></div>
+                </div>
+            </div>
+            <ul class="content_ul">
+                <li>
+                    <div>
+                        <div>总书记心系边疆和基层，'问的详细、问的具体'</div>
+                        <div style="color: #999;font-size: 0.22rem;position: absolute;bottom: 0.25rem;"><img src="image/content_look.png">2365  甘孜州精选 · 1小时前</div>
+                    </div>
+                    <img src="image/sign_background.png">
+                </li>
+                <li>
+                    <div>
+                        <div>总书记心系边疆和基层，'问的详细、问的具体'</div>
+                        <div style="color: #999;font-size: 0.22rem;position: absolute;bottom: 0.25rem;"><img src="image/content_look.png">2365  人民网 · 1小时前</div>
+                    </div>
+                    <img src="image/sign_background.png">
+                </li>
+            </ul>
+        </div>
+
+        <!--党员风采-->
+        <div class="content_value">
+            <div class="content_title">
+                <span>党建资讯</span>
+                <a href="dyzx_djzx_index.html">更多 <img src="image/path1_2x.png" style="width: 0.1rem;height: 0.18rem;vertical-align:unset;"></a>
+            </div>
+            <div class="content_top_img">
+                <div class="top_img top_img_1">
+                    <img src="image/sign_background.png">
+                    <div>习近平总书记'下团组'</div>
+                </div>
+                <div>
+
+                    <div class="top_img top_img_2">
+                        <img src="image/sign_background.png">
+                        <div>习近平总书记'下团组'</div>
+                    </div>
+                    <div class="top_img top_img_3">
+                        <img src="image/sign_background.png">
+                        <div>习近平总书记'下团组'</div>
+                    </div>
+
+                </div>
+
+            </div>
+            <ul class="content_ul">
+                <li>
+                    <div>
+                        <div>总书记心系边疆和基层，'问的详细、问的具体'</div>
+                        <div style="color: #999;font-size: 0.22rem;position: absolute;bottom: 0.25rem;"><img src="image/content_look.png">2365  甘孜州精选 · 1小时前</div>
+                    </div>
+                    <img src="image/sign_background.png" alt="">
+                </li>
+                <li>
+                    <div>
+                        <div>总书记心系边疆和基层，'问的详细、问的具体'健康保护缘故吧就要杨贵妃与他人一同很过分</div>
+                        <div style="color: #999;font-size: 0.22rem;position: absolute;bottom: 0.25rem;"><img src="image/content_look.png">2365  甘孜州精选 · 1小时前</div>
+                    </div>
+                    <img src="image/sign_background.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--底部fragment-->
+    <div class="fragment">
+        <div>
+            <img style="width: 0.47rem;" src="image/public_group_2x.png" alt="">
+            <div>公共服务</div>
+        </div>
+        <div>
+            <img src="image/public_dyzx2_2x.png" alt="">
+            <div>党员中心</div>
+        </div>
+        <div>
+            <img style="width: 0.35rem;" src="image/public_grzx_2x.png" alt="">
+            <div>个人中心</div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/swiper4/js/swiper.min.js"></script>
+<script src="js/swiper4/js/swiper.animate.min.js"></script>
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+    new Swiper('.swiper-container.swp1', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        on: {
+            init: function () {
+                this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+            },
+            slideChangeTransitionEnd: function () {
+
+            },
+        },
+        // 分页器
+        pagination: {
+            el: '.swiper-pagination.swiper1',
+            // type: 'fraction',
+            clickable: true
+        },
+    });
+
+    new Swiper('.swiper-container.swp2', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        on: {
+            init: function () {
+                swiperAnimateCache(this); //隐藏动画元素
+                this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+            },
+            slideChangeTransitionEnd: function () {
+                let num = $('.swiper_title_ul li').length;
+
+                $('.swiper_title_ul li').css('display', 'none');
+                $('.swiper_title_ul li').eq((this.activeIndex - 1) % num).css('display', 'block');
+                $('.swiper_title_index').eq(0).text((this.activeIndex - 1) % num + 1);
+                $('.swiper_page').eq(0).text((this.activeIndex - 1) % 4 + 1 + '/' + num)
+            },
+        },
+        navigation: {
+            nextEl: '.button_next',
+            prevEl: '.button_prev',
+        },
+    });
+
+
+    $(".content_ul").on("click",function () {
+        go("dyzx_djzx_detail.html?key=xxx")
+    })
+</script>
+</body>
+
+</html>

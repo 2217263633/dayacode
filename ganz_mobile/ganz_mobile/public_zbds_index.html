@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>支部电商</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+        .top_img {
+            width: 7.1rem;
+            height: 2.8rem;
+        }
+
+        .item_title {
+            margin-top: 0.4rem;
+            font-size: 0.32rem;
+            line-height: 0.6rem;
+            color: #020202;
+            font-weight: bold;
+        }
+
+        .item_title a {
+            font-size: 0.24rem;
+            color: #999;
+            float: right;
+            line-height: 0.6rem;
+            font-weight: normal;
+        }
+
+        .dszx_item ul {
+
+        }
+
+        .dszx_item ul > li > .dian {
+            display: inline-block;
+            width: 0.1rem;
+            height: 0.1rem;
+            background: #666;
+            border-radius: 0.6rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .dszx_item ul > li > .li_text {
+            display: inline-block;
+            font-size: 0.24rem;
+            color: #666666;
+            line-height: 0.6rem;
+            width: 5.2rem;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dszx_item ul > li > span {
+            font-size: 0.24rem;
+            float: right;
+            color: #999999;
+            line-height: 0.6rem;
+        }
+
+        .bdgqxx_item ul {
+            border-bottom: 0.08rem solid #f4f4f4;
+        }
+
+        .bdgqxx_item ul > li > .dian {
+            display: inline-block;
+            width: 0.1rem;
+            height: 0.1rem;
+            background: #666;
+            border-radius: 0.6rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .bdgqxx_item ul > li > .li_text {
+            display: inline-block;
+            font-size: 0.24rem;
+            color: #666666;
+            line-height: 0.6rem;
+            width: 5.2rem;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .bdgqxx_item ul > li > span {
+            font-size: 0.24rem;
+            float: right;
+            color: #999999;
+            line-height: 0.6rem;
+        }
+
+        .content_ul {
+            padding-bottom: 0.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .content_ul li {
+            border-top: 1px solid #e6e6e6;
+            font-size: 0.24rem;
+            line-height: 0.6rem;
+            position: relative;
+            width: 3.45rem;
+            height: 3.5rem;
+            margin-top: 0.2rem;
+        }
+        .content_ul li > .img_view {
+            width: 3.45rem;
+            height: 2.3rem;
+        }
+        .content_ul li > div {
+            background: #f4f4f4;
+            height: 1.2rem;
+            color: #333333;
+        }
+        .content_ul li > div > div {
+            height: 0.6rem;
+            overflow: hidden;
+            padding: 0 0.1rem;
+
+            /*超过2行自动隐藏加...*/
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        .content_ul li > div > span {
+            font-size: 0.2rem;
+            color: #999;
+            padding: 0 0.1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>支部电商</span>
+    </div>
+
+
+    <!--内容-->
+    <div class="content">
+        <img src="image/public_zbds_top.png" class="top_img">
+        <!--电商资讯-->
+        <div class="dszx_item">
+            <div class="item_title">
+                电商资讯 <a href="public_zbds_dszx.html">更多 ></a>
+            </div>
+            <ul>
+                <li data-index="0">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+                <li data-index="1">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+                <li data-index="2">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+            </ul>
+        </div>
+        <!--本地供求信息-->
+        <div class="bdgqxx_item">
+            <div class="item_title">
+                本地供求信息 <a href="">更多 ></a>
+            </div>
+            <ul>
+                <li data-index="0">
+                    <div class="dian"> </div>
+                    <div class="li_text">甘孜州 某某部门工厂现在急需500公斤大豆 有卖的撒大声地是的</div>
+                    <span>2019.02.24</span>
+                </li>
+                <li data-index="1">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+                <li data-index="2">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+            </ul>
+        </div>
+        <!--村有好货-->
+        <div class="cyhh_item">
+            <div class="item_title">
+                村有好货
+            </div>
+            <ul class="content_ul cyhh">
+                <li data-index="0">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>甘孜州某某支部提供</span>
+                    </div>
+                </li>
+                <li data-index="1">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="2">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="3">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    $('.cyhh li').on('click',function () {
+        go('public_zbds_cyhh.html?key='+this.dataset['index'])
+    })
+</script>
+</body>
+
+</html>

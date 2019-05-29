@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>公共服务首页</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/swiper4/css/swiper.min.css">
+    <link rel="stylesheet" href="js/swiper4/css/animate.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .content {
+            padding: 0 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .nav_btn {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 7.5rem;
+            height: 2.8rem;
+            margin: 0 0 0 -0.2rem;
+            border-bottom: 0.08rem solid #f4f4f4;
+        }
+
+        .nav_btn .nav_item {
+            width: 1.68rem;
+            font-size: 0.22rem;
+            line-height: 0.28rem;
+            text-align: center;
+        }
+
+        .nav_btn .nav_item img {
+            margin: 0.4rem 0 0.12rem 0;
+            width: 0.98rem;
+            height: 0.98rem;
+        }
+
+        .nav_item.small img {
+            margin: 0.2rem 0 0.12rem 0;
+            width: 0.54rem;
+            height: 0.54rem;
+        }
+
+        .message_box {
+            margin: 0.42rem 0 0 0;
+            padding-bottom: 0.32rem;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .message_box .message_item {
+            font-size: 0.32rem;
+            line-height: 0.45rem;
+            font-weight: bold;
+            color: #1e86cb;
+        }
+
+        .message_box .message_item span {
+            font-size: 0.24rem;
+            color: #333;
+            line-height: 0.45rem;
+            font-weight: normal;
+        }
+
+        .content_title {
+            font-size: 0.32rem;
+            line-height: 0.45rem;
+            color: #000;
+            height: 0.6rem;
+        }
+
+        .content_title_text {
+            font-size: 0.32rem;
+            color: #000;
+        }
+
+        .content_title a {
+            font-size: 0.28rem;
+            color: #666;
+            float: right;
+        }
+
+        .content_ul {
+            padding-bottom: 0.25rem;
+        }
+
+        .content_ul li {
+            border-bottom: 1px solid #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+            font-size: 0.28rem;
+            line-height: 0.35rem;
+            position: relative;
+        }
+
+        .content_ul li > img {
+            width: 2.3rem;
+            height: 1.54rem;
+        }
+
+        .content_ul li div > img {
+            width: 0.3rem;
+            height: 0.2rem;
+            margin-right: 0.1rem;
+        }
+
+        .content_ul li div div:first-child {
+            height: 1.1rem;
+            overflow: hidden;
+        }
+
+        .top_img div {
+            position: absolute;
+            height: 0.6rem;
+            width: 3.5rem;
+            background: rgba(0, 0, 0, 0.4);
+            bottom: 0;
+            font-size: 0.24rem;
+            line-height: 0.6rem;
+            color: #fff;
+            text-indent: 0.2rem;
+        }
+
+        .banner_img {
+            width: 7.5rem;
+            height: 3.8rem;
+            background: url(image/public_bannenr_2x.png) no-repeat;
+            background-size: 100% 100%;
+            margin-left: -0.2rem;
+        }
+
+        .zhangyu {
+            font-size: 0.18rem;
+            color: #999;
+            line-height: 0.4rem;
+            white-space:nowrap;
+        }
+
+        .is_login {
+            width: 6rem;
+            height: 0.74rem;
+            background: #fff;
+            margin: -0.37rem auto 0 auto;
+            border-radius: 0.2rem;
+            box-shadow: 0 3px 5px #ccc;
+        }
+
+        .login_user {
+            line-height: 0.74rem;
+            font-size: 0.24rem;
+            text-indent: 0.5rem;
+        }
+
+        .login_user a {
+            text-decoration: underline;
+            color: #1e86cb;
+            margin-left: 0.1rem;
+        }
+
+        .zyz_module {
+            display: flex;flex-wrap: nowrap;justify-content: space-between;padding-bottom: 0.6rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+
+    <!--内容-->
+    <div class="content">
+
+        <div class="banner_img"></div>
+
+        <div class="is_login">
+            <!--<div class="login_user"><span>尊敬的用户</span>您好！欢迎来到甘孜州党建云平台<a href="#">请登录</a></div>-->
+            <div class="login_user"><span>XXX</span>您好！欢迎来到甘孜州党建云平台<a href="#">切换用户</a></div>
+        </div>
+
+        <div class="nav_btn">
+
+            <div class="nav_item" onclick="go('public_mlgz_index.html')">
+                <img src="image/public_dmlgz_2x.png">
+                <div class="zhangyu">མཛེས་སྡུག་གི་དཀར་མཛེས།</div>
+                <div>美丽甘孜</div>
+            </div>
+            <div class="nav_item" onclick="go('public_zbds_index.html')">
+                <img src="image/public_dabds_2x.png">
+                <div class="zhangyu">ཀྲི་པུའུ་ཡི་གློག་ཚོང།</div>
+                <div>支部电商</div>
+            </div>
+            <div class="nav_item" onclick="go('public_xxyd_index.html')">
+                <img src="image/public_dxxyd_2x.png">
+                <div class="zhangyu">སློབ་སྦྱོང་ལྡུམ་ར།</div>
+                <div>学习园地</div>
+            </div>
+            <div class="nav_item">
+                <img src="image/public_dwyrd_2x.png">
+                <div class="zhangyu">ང་ལ་ཞུགས་རྒྱུ་འི།</div>
+                <div>我要入党</div>
+            </div>
+        </div>
+
+        <!--便民服务-->
+        <div class="zhangyu">དམངས་ཕན་ཞབས་ཞུ་འི།</div>
+        <div class="content_title">
+            <span class="content_title_text">便民服务</span>
+            <a href="public_bmfw_index.html">更多 <img src="image/double-right.png"
+                                style="width: 0.28rem;height: 0.22rem;vertical-align:unset;"></a>
+        </div>
+        <div class="nav_btn" style="height: 1.6rem;">
+            <div class="nav_item small">
+                <img src="image/public_bdtcx_2x.png">
+                <div>地图查询</div>
+            </div>
+            <div class="nav_item small" onclick="go('public_jqcx_select.html')">
+                <img src="image/public_bjqcx_2x.png">
+                <div>景区查询</div>
+            </div>
+            <div class="nav_item small" onclick="go('public_bmfw_sbcx.html')">
+                <img src="image/public_bsbcx_2x.png">
+                <div>社保查询</div>
+            </div>
+            <div class="nav_item small" onclick="go('public_bmfw_tel.html')">
+                <img src="image/public_bcydh_2x.png">
+                <div>常用电话</div>
+            </div>
+        </div>
+
+        <div class="message_box">
+            <div class="zhangyu">གླེང་ཆ་ཆེ་བའི་ཆ་འཕྲིན།</div>
+            <div class="content_title">
+                <span class="content_title_text">热点咨讯</span>
+                <a href="public_rdzx_index.html">更多 <img src="image/double-right.png" style="width: 0.28rem;height: 0.22rem;vertical-align:unset;"></a>
+            </div>
+
+            <div class="message_item" onclick="go('public_rdzx_detail.html?key=1')">
+                热点 | <span>四川代表热议'两高'工作报告为基本了解...</span> <span style="float: right;color: #999;">4小时前</span>
+            </div>
+            <div class="message_item" onclick="go('public_rdzx_detail.html?key=1')">
+                <span style="font-size: 0.32rem;line-height: 0.45rem;font-weight: bold;color: #333333;">资讯</span> |
+                <span>四川代表热议'两高'工作报告阿社区卫生解... <span style="float: right;color: #999;">3小时前</span></span>
+            </div>
+        </div>
+
+        <!--党建资讯-->
+        <div class="content_value">
+            <ul class="content_ul">
+                <li>
+                    <div>
+                        <div>总书记心系边疆和基层，'问的详细、问的具体'</div>
+                        <div style="color: #999;font-size: 0.22rem;position: absolute;bottom: 0.25rem;"><img
+                                src="image/content_look.png">2365 甘孜州精选 · 1小时前
+                        </div>
+                    </div>
+                    <img src="image/sign_background.png" alt="">
+                </li>
+                <li>
+                    <div>
+                        <div>总书记心系边疆和基层，'问的详细、问的具体'</div>
+                        <div style="color: #999;font-size: 0.22rem;position: absolute;bottom: 0.25rem;"><img
+                                src="image/content_look.png">2365 人民网 · 1小时前
+                        </div>
+                    </div>
+                    <img src="image/sign_background.png" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="zyz_module"  onclick="go('public_zyhd_index.html')">
+            <div style="width: 3.5rem;">
+                <img style="width: 3.5rem;height: 2.4rem;" src="image/public_zyhd_2x.png" alt="">
+                <div class="zhangyu">དང་བླངས་པའི་བྱེད་སྒོ་སྤེལ་བ།</div>
+                <div style="font-size: 0.32rem;line-height: 0.7rem;">志愿者活动</div>
+                <div style="font-size: 0.24rem;color: #999;">关爱社会 生活更加美好</div>
+            </div>
+            <div style="width: 3.5rem;" onclick="go('public_ldbz_xxgk.html')">
+                <img style="width: 3.5rem;height: 2.4rem;" src="image/public_ldbz_2x.png" alt="">
+                <div class="zhangyu">འགོ་ཁྲིད་ཚན་ཁག།</div>
+                <div style="font-size: 0.32rem;line-height: 0.7rem;">领导班子</div>
+                <div style="font-size: 0.24rem;color: #999;">信息公开 政府人员透明化</div>
+            </div>
+        </div>
+
+    </div>
+    <!--底部fragment-->
+    <div class="fragment">
+        <div>
+            <img style="width: 0.47rem;" src="image/public_group2_2x.png" alt="">
+            <div>公共服务</div>
+        </div>
+        <div>
+            <img src="image/public_dyzx_2x.png" alt="">
+            <div>党员中心</div>
+        </div>
+        <div>
+            <img style="width: 0.35rem;" src="image/public_grzx_2x.png" alt="">
+            <div>个人中心</div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/swiper4/js/swiper.min.js"></script>
+<script src="js/swiper4/js/swiper.animate.min.js"></script>
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+</body>
+
+</html>

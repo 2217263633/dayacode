@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>景区详情</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="js/swiper4/css/swiper.min.css">
+    <link rel="stylesheet" href="js/swiper4/css/animate.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .banner {
+
+        }
+
+        .banner .swiper-slide span {
+            position: absolute;
+            top: 2.7rem;
+            color: #fff;
+            font-size: 0.24rem;
+            width: 7.1rem;
+            display: inline-block;
+            background: rgba(27, 27, 27, 0.4);
+            text-indent: 0.24rem;
+
+            height: 0.7rem;
+            /*超过2行自动隐藏加...*/
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+
+        .banner .swiper-pagination-bullet-active {
+            background: linear-gradient(to left, #1095fc, #48aefd) !important;
+        }
+
+        .banner .swiper-pagination-bullet {
+            background: #d0d2db;
+            opacity: 1;
+            /*width: 0.2rem;*/
+            /*height: 0.06rem;*/
+            /*border-radius: 0.03rem;*/
+            margin: 0 0.05rem;
+        }
+
+        .banner .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            top: 2.95rem;
+        }
+
+        .banner .swiper-pagination {
+            margin-left: 3rem;
+        }
+
+        .content_value > li {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .content_value_title {
+            font-size: 0.28rem;
+            color: #000;
+            line-height: 0.8rem;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .content_value > li > p {
+            color: #666;
+            font-size: 0.24rem;
+            line-height: 0.4rem;
+            padding: 0.2rem 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>景区详情</span>
+    </div>
+
+
+    <!--内容-->
+    <div class="content">
+
+        <!--顶部bannner图-->
+        <div class="banner">
+            <div class="swiper-container swp1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="height: 3.4rem;">
+                        <img style="height: 3.4rem;" src="image/sign_background.png" alt="">
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                    <div class="swiper-slide" style="height: 3.4rem;">
+                        <img style="height: 3.4rem;" src="image/sign_background.png" alt="">
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                    <div class="swiper-slide" style="height: 3.4rem;">
+                        <img style="height: 3.4rem;" src="image/sign_background.png" alt="">
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                </div>
+                <!-- 分页器 -->
+                <div class="swiper-pagination swiper1"></div>
+            </div>
+        </div>
+
+        <ul class="content_value">
+            <!--地址-->
+            <li style="line-height: 0.8rem;font-size: 0.24rem;"><span class="el-icon-location">地址</span> <span style="color: #1b81c4;margin-left: 0.5rem;">四川省甘孜州康定市国际生态城旅游路26号</span></li>
+            <!--电话-->
+            <li style="line-height: 0.8rem;font-size: 0.24rem;"><span class="el-icon-phone-outline">地址</span> <span style="color: #1b81c4;margin-left: 0.5rem;">028-9636987</span></li>
+            <!--景区介绍-->
+            <li>
+                <div class="content_value_title">景区介绍</div>
+                <p>黄龙名胜风景区，坐落在四川省松潘县境内，是我国著名的风景游览区，荣获世界自然遗产、国家地质公园、国家5A级旅游景区等等殊荣。占地4万公顷，包括了本部黄龙沟、牟尼沟景区、红星岩景区、雪宝顶景区、四沟景区及丹云峡景区.</p>
+            </li>
+            <!--门票信息-->
+            <li>
+                <div class="content_value_title">门票信息</div>
+                <p>黄龙名胜风景区，坐落在四川省松潘县境内，是我国著名的风景游览区，荣获世界自然遗产、国家地质公园、国家5A级旅游景区等等殊荣。占地4万公顷，包括了本部黄龙沟、牟尼沟景区、红星岩景区、雪宝顶景区、四沟景区及丹云峡景区.</p>
+            </li>
+            <!--开放时间-->
+            <li>
+                <div class="content_value_title">开放时间（其他信息 ）</div>
+                <p>黄龙名胜风景区，坐落在四川省松潘县境内，是我国著名的风景游览.</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/swiper4/js/swiper.min.js"></script>
+<script src="js/swiper4/js/swiper.animate.min.js"></script>
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+    new Swiper('.swiper-container.swp1', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        on: {
+            init: function () {
+                this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+            },
+            slideChangeTransitionEnd: function () {
+
+            },
+        },
+        // 分页器
+        pagination: {
+            el: '.swiper-pagination.swiper1',
+            // type: 'fraction',
+            clickable: true
+        },
+    });
+
+</script>
+</body>
+
+</html>

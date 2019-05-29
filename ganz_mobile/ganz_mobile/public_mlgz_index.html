@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>美丽甘孜</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .item_title {
+            font-size: 0.32rem;
+            color: #212121;
+            line-height: 0.55rem;
+            font-weight: bold;
+        }
+
+        .item_title img {
+            width: 0.55rem;
+            height: 0.55rem;
+            margin-right: 0.15rem;
+        }
+
+        .banner_img {
+            width: 7.1rem;
+            height: 3.4rem;
+        }
+
+        .item_title {
+            margin-top: 0.4rem;
+            font-size: 0.32rem;
+            line-height: 0.6rem;
+            color: #020202;
+            font-weight: bold;
+        }
+
+        .item_title a {
+            font-size: 0.24rem;
+            color: #999;
+            float: right;
+            line-height: 0.6rem;
+            font-weight: normal;
+        }
+
+        .lyzx_item ul {
+            border-bottom: 0.1rem solid #f4f4f4;
+        }
+
+        .lyzx_item ul > li > .dian {
+            display: inline-block;
+            width: 0.1rem;
+            height: 0.1rem;
+            background: #666;
+            border-radius: 0.6rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .lyzx_item ul > li > .li_text {
+            display: inline-block;
+            font-size: 0.24rem;
+            color: #666666;
+            line-height: 0.6rem;
+            width: 5.2rem;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .lyzx_item ul > li > span {
+            font-size: 0.24rem;
+            float: right;
+            color: #999999;
+            line-height: 0.6rem;
+        }
+
+        .lyfg_item {
+            border-bottom: 0.1rem solid #f4f4f4;
+        }
+
+        .lyfg_item ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .lyfg_item ul li {
+            width: 3.45rem;
+            height: 3.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .lyfg_item ul li img {
+            width: 3.45rem;
+            height: 2.4rem;
+        }
+
+        .lyfg_item ul li div {
+            margin-top: 0.2rem;
+            height: 0.5rem;
+            width: 3.45rem;
+            font-size: 0.28rem;
+            line-height: 0.5rem;
+            color: #000;
+            overflow: hidden;
+        }
+
+        .ftwh_item ul li {
+            position: relative;
+            width: 7.1rem;
+            height: 2.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .ftwh_item ul li img {
+            width: 7.1rem;
+            height: 2.8rem;
+        }
+
+        .ftwh_item ul li div {
+            font-size: 0.28rem;
+            color: #fff;
+            line-height: 0.8rem;
+            height: 0.8rem;
+            width: 7.1rem;
+            text-indent: 0.4rem;
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>美丽甘孜</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <img class="banner_img" src="image/public_mlgz_top.png" onclick="go('public_mlgz_gzgk.html')">
+
+        <div class="lyzx_item">
+            <div class="item_title">
+                旅游资讯 <a href="public_mlgz_lyzx_list.html">更多 ></a>
+            </div>
+            <ul>
+                <li data-index="0">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+                <li data-index="1">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+                <li data-index="2">
+                    <div class="dian"> </div>
+                    <div class="li_text">海螺沟景区妇女节期间 旅游火爆海螺沟景区妇女阿斯顿其二为气味</div>
+                    <span>2019.02.24</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="lyfg_item">
+            <div class="item_title">旅游风光</div>
+
+            <ul>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="ftwh_item">
+            <div class="item_title">风土文化</div>
+
+            <ul>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+                <li>
+                    <img src="image/sign_background.png">
+                    <div>甘孜风光自由行·宗仁海</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    $(".lyzx_item ul li").on("click",function () {
+        go('public_mlgz_lyzx_detail.html?key='+this.dataset['index'])
+    })
+</script>
+</body>
+
+</html>

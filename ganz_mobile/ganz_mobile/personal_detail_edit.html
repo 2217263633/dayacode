@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>编辑资料</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .content_title {
+            font-size: 0.32rem;
+            line-height: 0.4rem;
+            color: #333;
+            font-weight: bold;
+            margin: 0.3rem 0;
+        }
+
+        .app {
+            padding-bottom: 1rem;
+        }
+
+        .list_item {
+            padding-bottom: 0.3rem;
+            /*border-bottom: 0.08rem solid #f4f4f4;*/
+        }
+
+        .from_item {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #333;
+            border-bottom: 1px solid #f4f4f4;
+            padding: 0.2rem 0;
+        }
+
+        .from_item > span {
+            color: #999;
+        }
+
+        .item_val > span {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .item_lab {
+            width: 1.7rem;
+            display: inline-block;
+            line-height: 0.6rem;
+            color: #666;
+        }
+
+        input[type=text],input[type=password] {
+            margin-left: 0;
+            background: #fff;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            text-align: right;
+            width: 4.9rem;
+            color: #999;
+            border: unset;
+        }
+
+        #my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            /*color: #fff;*/
+            /*background: linear-gradient(to left,#1095fc ,#48aefd);*/
+            background: #a5ddfe;
+            color: #fff;
+            margin: 0.4rem auto 0;
+        }
+
+        .head_photo {
+            width: 1.94rem;
+            height: 1.94rem;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>编辑资料</span>
+        <span class="save_edit" style="position: absolute;right: 0.2rem;line-height: 1rem;font-size: 0.32rem;">保存</span>
+    </div>
+
+
+    <!--内容-->
+    <div class="content">
+        <form action="#" id="edit_change">
+
+            <div style="text-align: center;">
+                <img class="head_photo" src="image/sign_background.png" onclick="$('input.head').click()">
+                <input id="head" class="head" type="file" name="head" accept="image/png,image/jpg,image/jpeg"
+                       style="display: none;" onchange="changeToop();">
+                <div class="content_title"  onclick="$('input.head').click()">更换头像</div>
+            </div>
+
+            <div class="list_item">
+                <div class="from_item">
+                    <div class="item_lab">昵称</div>
+                    <input name="nc" type="text" value="青春">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+                <div class="from_item">
+                    <div class="item_lab">性别</div>
+                    <input name="xb" type="text" value="男">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+                <div class="from_item">
+                    <div class="item_lab">出生年份</div>
+                    <input name="csff" type="text" value="1997.08.15">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+                <div class="from_item">
+                    <div class="item_lab">绑定手机</div>
+                    <input name="bdsj" type="text" value="1234567890">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+                <div class="from_item">
+                    <div class="item_lab">修改密码</div>
+                    <input name="xgmm" type="password" value="asdfghjkk">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+                <div class="from_item">
+                    <div class="item_lab">所属地区</div>
+                    <input name="ssdq" type="text" value="四川成都">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+                <div class="from_item">
+                    <div class="item_lab">现居地址</div>
+                    <input name="xjdz" type="text" value="羊犀立交">
+                    <span class="layui-icon">&#xe602;</span>
+                </div>
+
+                <div class="from_item">
+                    <div class="item_lab">个人签名 <span style="float: right;">75</span></div>
+                    <!--<input name="lynr" type="text" placeholder="例：1982.10.01">-->
+                    <textarea name="grqm" id=""
+                              style="width: 6.7rem;height: 2rem;border: unset;padding: 0.2rem;background:#f9f9f9;" maxlength="75" placeholder="写一句话来描述你的生活经历吧～"></textarea>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div id="my_button">退出当前账户</div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+
+    //监听是否全部输入
+    $("input[type='text']").bind('input propertychange', button);
+    $("textarea[name='lynr']").bind('input propertychange', button);
+
+    function button() {
+        let xm = $("input[name='xm']").val();
+        let dh = $("input[name='dh']").val();
+        let lynr = $("textarea[name='lynr']").val();
+        let lysj = $("input[name='lysj']").val();
+
+        let DOM = $('#my_button');
+
+        if (xm && dh && lynr && lysj) {
+            //不为空
+            DOM.css('background', 'linear-gradient(to left,#1095fc ,#48aefd)');
+            DOM.css('color', '#fff');
+        } else {
+            DOM.css('background', '#e6e6e6');
+            DOM.css('color', '#999');
+        }
+    }
+
+    $("#my_button").on("click", function () {
+
+    })
+
+
+    function changeToop() {
+        var file = $("input.head").get(0);
+        if (file.value == '') {
+            //设置默认图片
+            $("img.head_photo").get(0).src = 'image/sign_background.png';
+        } else {
+            $("img.head_photo").get(0).src = getFileUrl("head")
+        }
+    }
+
+    function getFileUrl(fileId) {
+        let url;
+        let file = document.getElementById(fileId);
+        let agent = navigator.userAgent;
+        if (agent.indexOf("MSIE") >= 1) {
+            url = file.value;
+        } else if (agent.indexOf("Firefox") > 0) {
+            url = window.URL.createObjectURL(file.files.item(0));
+        } else if (agent.indexOf("Chrome") > 0) {
+            url = window.URL.createObjectURL(file.files.item(0));
+        } else if (agent.indexOf("AppleWebKit") > 0) {
+            url = window.URL.createObjectURL(file.files.item(0));
+        }
+
+        console.log(agent.indexOf("MSIE"));
+        return url;
+    }
+
+    $(".save_edit").on("click",function () {
+        alert("提交表单");
+        $(".edit_change").submit();
+    })
+</script>
+</body>
+
+</html>

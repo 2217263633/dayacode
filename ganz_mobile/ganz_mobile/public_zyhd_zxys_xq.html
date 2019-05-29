@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线仪事</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<style>
+    .personal_title {
+        position: fixed;
+        top: 0;
+        color: #fff;
+        background: linear-gradient(to right, #48aefd, #1095fc);
+        height: 1rem;
+        width: 100%;
+        line-height: 1rem;
+        font-size: 0.32rem;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .content {
+        padding: 0.2rem;
+        margin-top: 1rem;
+        background: #fff;
+    }
+
+    .upBox {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+    }
+
+    .left_layout img {
+        padding-top: 0.4rem;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .rightbox {
+        padding-top: 0.55rem;
+    }
+
+    .rightbox p {
+        padding: 0.24rem 0 0.24rem 0;
+    }
+
+    .Photo {
+        text-align: center;
+        padding-bottom: 0.25rem;
+    }
+
+    .Photo img {
+        max-width: 94%;
+        width: 7.1rem;
+        height: 3.2rem;
+        border-radius: 4px;
+    }
+
+    .bottom_layout {
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 4px solid #f4f4f4;
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.24rem;
+    }
+
+    .items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 0.89rem;
+    }
+
+    .bottom_layout img {
+
+        width: 0.2rem;
+        height: 0.21rem;
+
+    }
+
+    .bottom_layout a {
+        padding: 0 0.1rem;
+    }
+
+    .replys {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 0.24rem;
+        height: 0.55rem;
+        width: 7rem;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .title strong {
+        position: relative;
+
+    }
+
+    .title strong::after {
+
+        content: " ";
+        width: 0.7rem;
+        height: 0.04rem;
+        background: #1296fc;
+        position: absolute;
+        bottom: -0.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .firstcomment {
+        display: flex;
+        justify-content: space-between;
+        color: #999999;
+    }
+
+    .LeftComment {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .LeftComment img {
+        width: 0.6rem;
+        height: 0.6rem;
+        padding-top: 0.4rem;
+        padding-right: 0.11rem;
+    }
+
+    .LeftComment p {
+        padding-top: 0.59rem;
+    }
+
+    .rightcomment {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-top: 0.59rem;
+    }
+
+    .rightcomment img {
+
+        width: 0.2rem;
+        height: 0.21rem;
+        vertical-align: middle;
+        padding-right: 0.05rem;
+    }
+
+    .rightcomment span {
+        font-size: 0.22rem;
+
+        padding-right: 0.19rem;
+    }
+
+    .Comment {
+        color: #000;
+
+        padding-left: 0.7rem;
+        line-height: 0.3rem;
+    }
+
+    .reply {
+        background: #f4f4f4;
+        height: 1.53rem;
+        color: #999999;
+        margin-top: 0.2rem;
+    }
+
+    .replyImg img {
+        width: 0.6rem;
+        height: 0.63rem;
+        vertical-align: middle;
+        padding-right: 0.05rem;
+    }
+
+    .replyImg p {
+        padding-left: 0.7rem;
+        line-height: 0.26rem;
+        color: #000;
+    }
+
+    .CommentBox {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .footer {
+        height: 0.98rem;
+        display: flex;
+        align-items: center;
+    }
+    .footer img{
+        width: 0.3rem;
+        height: 0.3rem;
+        margin: 0 0.3rem;
+    }
+    .msg{
+        background: #f4f4f4;
+        border-radius: 8px;
+        height: 0.6rem;
+        width: 80% !important;
+        margin:  auto 0;
+        margin-left: 0.43rem;
+    }
+</style>
+
+<body>
+    <div class="app">
+        <!--顶部返回栏-->
+        <div class="personal_title">
+            <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+                class="el-icon-arrow-left"></span>
+            <span>在线仪事</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="Box">
+            <div class="upBox">
+                <div class="left_layout">
+                    <img src="image/public_zyhd_zxys_head.png">
+                </div>
+                <div class="rightbox">
+                    <strong style="font-size:0.28rem ">管理员</strong>
+                    <p style="color: #999999">2019-4-25</p>
+                    <strong style="color: #1095fc;font-size:0.28rem">仪事主题：</strong>
+                    <p style="color: black;font-size:0.28rem">你是否同意康园新城小区绿化升级</p>
+                </div>
+            </div>
+            <div class="Photo">
+                <img src="image/public_zyhd_zxys_photo.png">
+            </div>
+            <div class="bottom_layout">
+                <div class="approval items">
+                    <img src="image/public_zyhd_zxys_approval.png">
+                    <a>赞成</a>
+                    <span style="color: #1095fc">236</span>
+                </div>
+                <div class="oppose items">
+                    <img src="image/public_zyhd_zxys_oppose.png">
+                    <a>反对</a>
+                    <span style="color: #cf0e0e">25</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="replys">
+        <div class="title"><strong>评论 605</strong></div>
+        <div class="CommentBox">
+            <div class="firstcomment">
+                <div class="LeftComment">
+                    <img src="image/public_zyhd_zxys_head-small.png">
+                    <p>小野喵喵</p>
+                </div>
+                <div class="rightcomment">
+                    <img src="image/public_zyhd_zxys_support.png" class="toggle"><span>120</span>
+                    <img src="image/public_zyhd_zxys_reply.png" alt=""><span>回复</span>
+                </div>
+            </div>
+            <div class="Comment">
+                <p>虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。</p>
+            </div>
+        </div>
+        <div class="CommentBox">
+            <div class="firstcomment">
+                <div class="LeftComment">
+                    <img src="image/public_zyhd_zxys_head-small.png">
+                    <p>秋思</p>
+                </div>
+                <div class="rightcomment">
+                    <img src="image/public_zyhd_zxys_support-on.png" class="toggle"><span>120</span>
+                    <img src="image/public_zyhd_zxys_reply.png" alt=""><span>回复</span>
+                </div>
+            </div>
+            <div class="Comment">
+                <p>虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。习近平到宁德工作时，她才两岁多。一颗颗当年种下的扶贫种子，如今开花结果。</p>
+                <div class="reply">
+                    <div class="replyImg">
+                        <img src="image/public_zyhd_zxys_head-small.png">
+                        <span>乐思甜</span>
+                        <p>虽然这是雷金玉第一次见习近平，但是她的家乡和
+                            她的民族早在30多年前就为习近平所牵挂。</p>
+                    </div>
+                </div>
+                <div class="reply">
+                    <div class="replyImg">
+                        <img src="image/public_zyhd_zxys_head-small.png">
+                        <span>张无忌</span>
+                        <p>虽然这是雷金玉第一次见习近平，但是她的家乡和
+                            她的民族早在30多年前就为习近平所牵挂。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="CommentBox">
+            <div class="firstcomment">
+                <div class="LeftComment">
+                    <img src="image/public_zyhd_zxys_head-small.png">
+                    <p>小野喵喵</p>
+                </div>
+                <div class="rightcomment">
+                    <img src="image/public_zyhd_zxys_support.png" class="toggle"><span>120</span>
+                    <img src="image/public_zyhd_zxys_reply.png" alt=""><span>回复</span>
+                </div>
+            </div>
+            <div class="Comment">
+                <p>虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。</p>
+            </div>
+        </div>
+        <div class="CommentBox">
+            <div class="firstcomment">
+                <div class="LeftComment">
+                    <img src="image/public_zyhd_zxys_head-small.png">
+                    <p>小野喵喵</p>
+                </div>
+                <div class="rightcomment">
+                    <img src="image/public_zyhd_zxys_support.png" class="toggle"><span>120</span>
+                    <img src="image/public_zyhd_zxys_reply.png" alt=""><span>回复</span>
+                </div>
+            </div>
+            <div class="Comment">
+                <p>虽然这是雷金玉第一次见习近平，但是她的家乡和她的民族早在30多年前就为习近平所牵挂。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+            <input class="msg" type="text" placeholder="说点什么吧..." autofocus="autofocus">
+            <img src="image/public_zyhd_zxys_send.png" alt="">
+    </div>
+</body>
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+   $('.toggle').on('click',function(){
+        
+        Choice = $(this).attr('src')
+        if(Choice == 'image/public_zyhd_zxys_support.png')
+        {
+            $(this).attr('src','image/public_zyhd_zxys_support-on.png')
+        }else{
+            $(this).attr('src','image/public_zyhd_zxys_support.png')
+        }
+   })
+
+</script>
+</html>

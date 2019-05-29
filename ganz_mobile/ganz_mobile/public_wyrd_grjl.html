@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>我要入党</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+        }
+
+        .app {
+            padding-bottom: 1rem;
+        }
+
+        .step {
+            text-align: center;
+            display: inline-block;
+        }
+
+        .step div {
+            display: inline-block;
+        }
+
+        .step > div {
+            margin-left: -0.12rem;
+        }
+
+        .step .baidian {
+            width: 0.12rem;
+            height: 0.12rem;
+            background: #ffffff;
+            border-radius: 0.1rem;
+            vertical-align: middle;
+        }
+
+        .step .line1 {
+            width: 1.9rem;
+            height: 0.1rem;
+            background-image: linear-gradient(to right, #3498db, #34badb);
+
+        }
+
+        .step .line2 {
+            width: 1.9rem;
+            height: 0.1rem;
+            background-image: linear-gradient(to right, #34badb, #34dbd5);
+        }
+
+        .step .line3 {
+            width: 1.9rem;
+            height: 0.1rem;
+            background-image: linear-gradient(to right, #34dbd5, #29db9a);
+        }
+
+        .dian1 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #3498db;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .dian2 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #34badb;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .dian3 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #34dbd5;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .dian4 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #29db9a;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .step_txt {
+            text-align: center;
+            margin-bottom: 0.2rem;
+            display: flex;
+        }
+
+        .step_txt div {
+            display: inline-block;
+            font-size: 0.28rem;
+            line-height: 0.3rem;
+        }
+
+        .txt1 {
+            margin-left: 0.2rem;
+        }
+
+        .txt2 {
+            margin-left: 0.8rem;
+        }
+
+        .txt3 {
+            margin-left: 0.9rem;
+        }
+
+        .txt4 {
+            margin-left: 0.8rem;
+        }
+
+        .top_progress {
+            margin-top: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 1px 3px #ccc;
+        }
+
+        .list_item {
+            padding-bottom: 0.3rem;
+            border-bottom: 0.08rem solid #f4f4f4;
+        }
+
+        .from_item {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #333;
+            /*border-bottom: 1px solid #f4f4f4;*/
+            padding: 0.2rem 0;
+        }
+
+        .item_title {
+            font-size: 0.32rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .item_val {
+
+        }
+
+        .item_val > span {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .item_lab {
+            width: 1.4rem;
+            display: inline-block;
+            line-height: 0.6rem;
+            color: #666;
+        }
+
+        input[type='text'] {
+            margin-left: 0;
+            background: #f4f4f4;
+            text-indent: 0.1rem;
+            height: 0.6rem;
+            line-height: 0.6rem;
+            border-radius: 4px;
+        }
+
+        .append_list_item {
+            width: 2.4rem;
+            height: 0.74rem;
+            line-height: 0.74rem;
+            font-size: 0.28rem;
+            color: #999;
+            border: 1px solid #ccc;
+            border-radius: 0.08rem;
+            text-align: center;
+            margin: 0.4rem 0 0.2rem 4.68rem;
+        }
+
+        #my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            /*color: #fff;*/
+            /*background: linear-gradient(to left,#1095fc ,#48aefd);*/
+            background: #e6e6e6;
+            color: #999;
+            margin: 0.4rem auto 0;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>我要入党</span>
+    </div>
+
+    <div class="top_progress">
+        <div class="step_txt">
+            <div>
+                <div class="txt1" style="color: #3498db;">
+                    基本信息
+                </div>
+            </div>
+            <div>
+                <div class="txt2" style="color: #34badb;">
+                    个人经历
+                </div>
+            </div>
+            <div>
+                <div class="txt3" style="color: #34dbd5;">
+                    家庭情况
+                </div>
+            </div>
+            <div>
+                <div class="txt4" style="color: #34dbd5;">
+                    入党原因
+                </div>
+            </div>
+        </div>
+        <!-- data-i 123  表示进度，文字内容在step_txt中-->
+        <div class="step" style="text-align: center" data-i="2">
+            <div style="margin-left: 0.5rem;">
+                <div class="line1"></div>
+                <div class="dian1">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+            <div>
+                <div class="line2"></div>
+                <div class="dian2">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+            <div>
+                <div class="line3"></div>
+                <div class="dian3">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+            <div>
+                <div style="width: 0;"></div>
+                <div class="dian4">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <!--个人经历-->
+        <div class="from_item">
+            <div class="item_title">个人经历 <span style="font-size: 0.2rem;color: #999;">(包括学历)从小学填起，起止年月要衔接</span></div>
+        </div>
+
+        <div class="list_item">
+            <!--起止时间-->
+            <div class="from_item">
+                <div class="item_lab">起止时间</div>
+                <input name="qzss_start" type="text" style="width: 2.59rem;" placeholder="请输入起始时间"> —
+                <input name="qzss_end" type="text" style="width: 2.59rem;" placeholder="请输入截止时间">
+            </div>
+            <!--在何地、何部门、任何职-->
+            <div class="from_item">
+                <div class="item_lab" style="width: unset;">在何地、何部门、任何职</div>
+                <input name="job" type="text" style="width: 7.1rem;" placeholder="请输入">
+            </div>
+            <!--证明人-->
+            <div class="from_item">
+                <div class="item_lab">证明人</div>
+                <input name="zmr" type="text" placeholder="请输入证明人">
+            </div>
+        </div>
+
+    </div>
+    <div class="append_list_item el-icon-circle-plus-outline" onclick="append()">添加个人经历</div>
+    <div id="my_button">下一步</div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+
+    //基数
+    let list_item_index = 1;
+    let data_arr = [];
+
+    //初始化
+    let i = $(".step").get(0).dataset['i'];
+    switch (i) {
+        case "1":
+            $(".dian2").get(0).style.background = "#bdbdbd";
+            $(".dian3").get(0).style.background = "#dddddd";
+            $(".dian4").get(0).style.background = "#eee";
+
+            $(".txt2").get(0).style.color = "#bdbdbd";
+            $(".txt3").get(0).style.color = "#dddddd";
+            $(".txt4").get(0).style.color = "#dddddd";
+
+            $(".line1").get(0).style.background = "linear-gradient(to right, rgb(52, 152, 219),#bdbdbd)";
+            $(".line2").get(0).style.background = "linear-gradient(to right, #bdbdbd,#dddddd)";
+            $(".line3").get(0).style.background = "linear-gradient(to right, #dddddd,#eee)";
+            break;
+        case "2":
+            $(".dian3").get(0).style.background = "#dddddd";
+            $(".dian4").get(0).style.background = "#eee";
+
+            $(".txt3").get(0).style.color = "#dddddd";
+            $(".txt4").get(0).style.color = "#dddddd";
+
+            $(".line2").get(0).style.background = "linear-gradient(to right, #34badb,#dddddd)";
+            $(".line3").get(0).style.background = "linear-gradient(to right, #dddddd,#eee)";
+            break;
+        case "3":
+            $(".dian4").get(0).style.background = "#eee";
+            $(".txt4").get(0).style.color = "#dddddd";
+            $(".line3").get(0).style.background = "linear-gradient(to right, #34dbd5,#eee)";
+            break;
+        case "4":
+            break;
+    }
+
+    //监听是否全部输入
+    $("input[type='text']").bind('input propertychange', button);
+
+    function button() {
+        let DOM = $("#my_button");
+        let flag = true;
+        data_arr = [];
+
+        let list_item = $(".list_item");
+        for (let i = 0; i < list_item_index; i++) {
+            let qzss_start = $(list_item[i]).find('input[name=qzss_start]').val();
+            let qzss_end = $(list_item[i]).find('input[name=qzss_end]').val();
+            let job = $(list_item[i]).find('input[name=job]').val();
+            let zmr = $(list_item[i]).find('input[name=zmr]').val();
+
+            if (!(qzss_start && qzss_end && job && zmr)) {
+                flag = false ;
+            }
+
+            data_arr.push ({
+                "qzss_start" : qzss_start,
+                "qzss_end"   : qzss_end,
+                "job"        : job,
+                "zmr"        : zmr
+            });
+        }
+
+        if ( flag ) {
+            //不为空
+            DOM.css('background', 'linear-gradient(to left,#1095fc ,#48aefd)');
+            DOM.css('color', '#fff');
+        } else {
+            DOM.css('background', '#e6e6e6');
+            DOM.css('color', '#999');
+        }
+    }
+
+    //添加个人经历
+    function append() {
+        let Dom = '<div class="list_item">\n' +
+            '            <!--起止时间-->\n' +
+            '            <div class="from_item">\n' +
+            '                <div class="item_lab">起止时间</div>\n' +
+            '                <input name="qzss_start" type="text" style="width: 2.59rem;" placeholder="请输入起始时间"> —\n' +
+            '                <input name="qzss_end" type="text" style="width: 2.59rem;" placeholder="请输入截止时间">\n' +
+            '            </div>\n' +
+            '            <!--在何地、何部门、任何职-->\n' +
+            '            <div class="from_item">\n' +
+            '                <div class="item_lab" style="width: unset;">在何地、何部门、任何职</div>\n' +
+            '                <input name="job" type="text" style="width: 7.1rem;" placeholder="请输入">\n' +
+            '            </div>\n' +
+            '            <!--证明人-->\n' +
+            '            <div class="from_item">\n' +
+            '                <div class="item_lab">证明人</div>\n' +
+            '                <input name="zmr" type="text" placeholder="请输入证明人">\n' +
+            '            </div>\n' +
+            '        </div>'
+        $(".content").append(Dom);
+        list_item_index++;
+
+        //添加绑定
+        $("input[type='text']").bind('input propertychange', button);
+        //更改状态
+        $("#my_button").css('background', '#e6e6e6');
+        $("#my_button").css('color', '#999');
+    }
+
+    $("#my_button").on("click", function () {
+        if ($(this).css('color') === "rgb(255, 255, 255)") {
+            alert(JSON.stringify(data_arr))
+        } else {
+            alert('请输入详细信息');
+        }
+    })
+</script>
+</body>
+
+</html>

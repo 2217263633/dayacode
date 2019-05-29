@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>我的消息</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+		*{
+			
+			-webkit-touch-callout:none;
+			-webkit-user-select:none;
+			-khtml-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+		}
+		
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            /*border-bottom: 1px solid #dddddd;*/
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 0.28rem;
+            margin: 1rem 0;
+            padding: 0.2rem;
+            background: #f9f9f9;
+        }
+
+        ul.content_ul {
+
+        }
+
+        ul.content_ul > li {			
+            width: 7.1rem;
+            height: 1.5rem;
+            margin-bottom: 0.2rem;
+            display: flex;
+            background: #fff;
+            border-radius: 0.1rem;
+            position: relative;
+        }
+
+        ul.content_ul > li > img {
+            width: 1rem;
+            height: 1rem;
+            margin: 0.25rem;
+        }
+
+        ul.content_ul > li > div {
+            width: 5.4rem;
+            height: 1rem;
+            margin: 0.25rem 0;
+        }
+
+        .xtgg_title {
+            line-height: 0.6rem;
+            font-size: 0.32rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .xtgg_value {
+            line-height: 0.4rem;
+            font-size: 0.24rem;
+            color: #999;
+            font-weight: normal;
+        }
+
+        .f_r {
+            float: right;
+        }
+
+        .long_target {
+            display: inline-block;
+            width: 7.1rem;
+            height: 1.5rem;
+            position: absolute;
+            top: 0;
+            background: rgba(248, 248, 248, 0.8);
+            text-align: center;
+            color: #fff;
+        }
+
+        .long_target > i {
+			
+            font-size: 0.32rem;
+            display: inline-block;
+            width: 1.4rem;
+            height: 0.8rem;
+            background: rgba(16, 149, 252, 0.6);
+            border-radius: 0.1rem;
+            line-height: 0.8rem;
+            text-align: center;
+            margin-top: 0.35rem;
+        }
+
+		.message_num  {
+			display: inline-block;width: 0.35rem;height: 0.35rem;border-radius: 0.2rem;font-size: 0.25rem;text-align: center;line-height: 0.35rem;background:#f91b2b;margin-left: 0.1rem;
+		}
+		
+		.h_dian > span {
+			display: inline-block;
+			width: 0.2rem;
+			height: 0.2rem;
+			border-radius: 0.1rem;
+			position: absolute;
+			top: 0.35rem;
+			left: 2.9rem;
+			background: #ff0000;
+		}
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>我的消息<span class="message_num">3</span></span>
+    </div>
+
+    <!--&lt;!&ndash;空消息&ndash;&gt;-->
+    <!--<div class="content">-->
+    <!--<img style="margin-top: 1.2rem;width: 7.1rem;height: 4.8rem;" src="image/personal_message_detail.png">-->
+    <!--<div style="text-align: center;">暂无关于你的消息</div>-->
+    <!--</div>-->
+
+    <!--有消息-->
+    <div class="content">
+        <ul class="content_ul">
+            <!--系统公告-->
+            <li data-index="0" class="h_dian">
+				<span></span>
+                <img src="image/personal_message_xtgg.png">
+                <div>
+                    <span class="xtgg_value f_r">11月22日</span>
+                    <div class="xtgg_title">系统公告</div>
+                    <div class="xtgg_value">本系统教育2月25日更新BUG！暂时无法登陆</div>
+                </div>
+            </li>
+            <!--系统消息-->
+            <li data-index="1" class="h_dian">
+				<span></span>
+                <img src="image/personal_message_xtxx.png">
+                <div>
+                    <span class="xtgg_value f_r">11月22日</span>
+                    <div class="xtgg_title">系统消息</div>
+                    <div class="xtgg_value">本系统教育2月25日更新BUG！暂时无法登陆</div>
+                </div>
+            </li>
+			<!--系统消息-->
+			<li data-index="2" class="h_dian">
+				<span></span>
+			    <img src="image/personal_message_xtxx.png">
+			    <div>
+			        <span class="xtgg_value f_r">11月22日</span>
+			        <div class="xtgg_title">系统消息</div>
+			        <div class="xtgg_value">本系统教育2月25日更新BUG！暂时无法登陆</div>
+			    </div>
+			</li>
+			<!--系统消息-->
+			<li data-index="3">
+				<span></span>
+			    <img src="image/personal_message_xtxx.png">
+			    <div>
+			        <span class="xtgg_value f_r">11月22日</span>
+			        <div class="xtgg_title">系统消息</div>
+			        <div class="xtgg_value">本系统教育2月25日更新BUG！暂时无法登陆</div>
+			    </div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    var longClick = 0;
+    $(".content_ul > li").on({
+        touchstart: function (e) {
+            longClick = 0;//设置初始为0
+            timeOutEvent = setTimeout(function () {
+                //此处为长按事件-----在此显示遮罩层及删除按钮
+                longClick = 1;//假如长按，则设置为1
+                // alert("长按事件")
+
+                let li_index = "";
+                let DOM = '<i class="long_target">\n' +
+                    '<i>标记已读</i>\n' +
+                    '<i>删除</i>\n' +
+                    '</i>';
+                //清楚其余
+                $(".long_target").remove();
+
+                if (e.target.nodeName === "LI") {
+                    li_index = e.target.dataset["index"];
+                    $(e.target).append(DOM);
+                    $(e.target).remove("touchend");
+                }
+                else if (e.target.nodeName === "IMG") {
+                    li_index = $(e.target).parent().dataset["index"];
+                    $(e.target).parent()[0].append(DOM)
+                }
+                else if (e.target.nodeName === "SPAN" || e.target.nodeName === "DIV") {
+                    li_index = $(e.target).parent().parent()[0].dataset["index"];
+                    $(e.target).parent().parent().append(DOM)
+                }
+
+                $('.long_target > i').on({
+                    touchstart: function (e) {
+						
+                    },
+                    touchmove: function (e) {
+                        clearTimeout(timeOutEvent);
+                        e.preventDefault();
+                    },
+                    touchend: function (e) {
+                        clearTimeout(timeOutEvent);
+                        if (timeOutEvent != 0) {//点击
+                            //点击事件处理
+
+                            if (e.target.textContent === "删除") {
+                                // alert('删除' + li_index + '个li消息');
+								
+								// 删除元素
+                                $(e.target).parent().parent().remove()
+								// 更改顶部消息数量
+								$(".message_num").text( parseInt($(".message_num").text())-1 )
+                            } else {
+                                alert('标记已读' + li_index + '个li消息');
+								
+								// 更改顶部消息数量
+								$(".message_num").text( parseInt($(".message_num").text())-1 );
+								$(e.target).parent().parent().removeClass("h_dian");
+                            }
+							
+							
+							//移除浮出
+							$(".long_target").remove();
+                        }
+                        return false;
+                    }
+                });
+
+
+                console.log(li_index);
+
+            }, 500);
+        },
+        touchmove: function (e) {
+            clearTimeout(timeOutEvent);
+            timeOutEvent = 0;
+            e.preventDefault();
+        },
+        touchend: function (e) {
+
+
+            clearTimeout(timeOutEvent);
+            if (timeOutEvent != 0 && longClick == 0) {//点击
+                //此处为点击事件----在此处添加跳转详情页
+                
+				if (e.target.nodeName === "I") {
+					//移除浮出
+					$(".long_target").remove();
+				}else {
+					alert('点击');
+					
+					if (e.target.nodeName === "LI") {
+						$(e.target).removeClass("h_dian")
+					}
+					else if (e.target.nodeName === "IMG") {
+						$(e.target).parent().removeClass("h_dian")
+					}
+					else if (e.target.nodeName === "SPAN" || e.target.nodeName === "DIV") {
+						$(e.target).parent().parent().removeClass("h_dian")
+					}
+				}
+            }
+            return false;
+        }
+    });
+</script>
+</body>
+</html>

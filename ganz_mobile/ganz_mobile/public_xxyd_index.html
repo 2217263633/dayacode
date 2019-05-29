@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>学习园地</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="js/swiper4/css/swiper.min.css">
+    <link rel="stylesheet" href="js/swiper4/css/animate.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .banner {
+
+        }
+
+        .banner .swiper-slide span {
+            position: absolute;
+            top: 2.7rem;
+            color: #fff;
+            font-size: 0.24rem;
+            width: 7.1rem;
+            display: inline-block;
+            background: rgba(27, 27, 27, 0.4);
+            text-indent: 0.24rem;
+        }
+
+        .banner .swiper-slide video {
+            width: 7.1rem;
+            height: 3.36rem;
+            object-fit: fill;
+        }
+
+        .banner .swiper-pagination-bullet-active {
+            background: #73a6ff !important;
+        }
+
+        .banner .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 1;
+        }
+
+        .banner .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            top: 2.95rem;
+            margin-left: 2.9rem;
+        }
+
+        .nav_btn {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            width: 6.72rem;
+            height: 2rem;
+            border-radius: 0.04rem;
+            box-shadow: 0 3px 5px #ccc;
+            margin: 0.2rem auto;
+        }
+
+        .nav_btn .nav_item {
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.22rem;
+            line-height: 0.28rem;
+            text-align: center;
+        }
+
+        .nav_btn .nav_item img {
+            margin: 0.4rem 0 0.12rem 0;
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+
+        .content_value {
+
+        }
+
+        .content_value .content_title {
+            height: 0.98rem;
+            line-height: 0.98rem;
+            font-size: 0.32rem;
+            color: #000;
+            border-top: 0.08rem solid #f4f4f4;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .content_value .content_title a {
+            font-size: 0.28rem;
+            color: #999;
+            float: right;
+        }
+
+
+        .content_ul {
+            padding-bottom: 0.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .content_ul li {
+            border-top: 1px solid #e6e6e6;
+            font-size: 0.24rem;
+            line-height: 0.6rem;
+            position: relative;
+            width: 3.45rem;
+            height: 3.5rem;
+            margin-top: 0.2rem;
+        }
+        .content_ul li > .img_view {
+            width: 3.45rem;
+            height: 2.3rem;
+        }
+        .content_ul li > .bofang {
+            width: 0.52rem;
+            height: 0.52rem;
+            position: absolute;
+            top: 0.84rem;
+            left: 1.465rem;
+        }
+        .content_ul li > div {
+            background: #f4f4f4;
+            height: 1.2rem;
+            color: #333333;
+        }
+        .content_ul li > div > div {
+            height: 0.6rem;
+            overflow: hidden;
+            padding: 0 0.1rem;
+
+            /*超过2行自动隐藏加...*/
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        .content_ul li > div > span {
+            font-size: 0.2rem;
+            color: #999;
+            padding: 0 0.1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>学习园地</span>
+        <span style="position: absolute;right: 0.25rem;"><img src="image/bmfw_sbcx_search_2x.png" style="width: 0.3rem;height: 0.3rem;"></span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+
+        <!--顶部bannner图-->
+        <div class="banner">
+            <div class="swiper-container swp1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="height: 3.36rem;">
+                        <!--<img style="height: 3.36rem;" src="image/sign_background.png" alt="">-->
+                        <video src="../emm/test.mp4" poster="image/sign_background.png" controls ></video>
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                    <div class="swiper-slide" style="height: 3.36rem;">
+                        <video src="../emm/test.mp4" controls ></video>
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                    <div class="swiper-slide" style="height: 3.36rem;">
+                        <video src="../emm/test.mp4" controls ></video>
+                        <span>习近平: 推动国土绿化不断取得实实在在的成效</span>
+                    </div>
+                </div>
+                <!-- 分页器 -->
+                <div class="swiper-pagination swiper1"></div>
+            </div>
+        </div>
+
+        <div class="nav_btn">
+            <div class="nav_item" onclick="go('public_xxyd_xxt.html')">
+                <img src="image/zhuzhi_2x.png">
+                <div>学习堂</div>
+            </div>
+            <div class="nav_item" onclick="go('public_xxyd_zxzb.html')">
+                <img src="image/yishi_2x.png">
+                <div>在线直播</div>
+            </div>
+            <div class="nav_item" onclick="">
+                <img src="image/ceping_2x.png">
+                <div>12371共产党员网</div>
+            </div>
+
+        </div>
+
+        <!--图文课件-->
+        <div class="content_value">
+            <div class="content_title">
+                <span>图文课件</span>
+                <a href="public_xxyd_twkj.html">更多 <img src="image/path1_2x.png" style="width: 0.1rem;height: 0.18rem;vertical-align:unset;"></a>
+            </div>
+            <ul class="content_ul twkj">
+                <li data-index="0">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="1">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="2">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="3">
+                    <img class="img_view" src="image/sign_background.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--视频课件-->
+        <div class="content_value">
+            <div class="content_title">
+                <span>视频课件</span>
+                <a href="public_xxyd_spkj.html">更多 <img src="image/path1_2x.png" style="width: 0.1rem;height: 0.18rem;vertical-align:unset;"></a>
+            </div>
+            <ul class="content_ul spkj">
+                <li data-index="0">
+                    <img class="img_view" src="image/sign_background.png">
+                    <img class="bofang" src="image/public_xxyd_index_bofang2.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="1">
+                    <img class="img_view" src="image/sign_background.png">
+                    <img class="bofang" src="image/public_xxyd_index_bofang2.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="2">
+                    <img class="img_view" src="image/sign_background.png">
+                    <img class="bofang" src="image/public_xxyd_index_bofang2.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="3">
+                    <img class="img_view" src="image/sign_background.png">
+                    <img class="bofang" src="image/public_xxyd_index_bofang2.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+                <li data-index="4">
+                    <img class="img_view" src="image/sign_background.png">
+                    <img class="bofang" src="image/public_xxyd_index_bofang2.png">
+                    <div>
+                        <div>攻坚克难—坚决打赢脱贫攻qwebu</div>
+                        <span>共产党员网 · 500浏览</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/swiper4/js/swiper.min.js"></script>
+<script src="js/swiper4/js/swiper.animate.min.js"></script>
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+    let mySwiper = new Swiper('.swiper-container.swp1', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        on: {
+            init: function () {
+                this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+            },
+            slideChangeTransitionEnd: function () {
+
+            },
+        },
+        // 分页器
+        pagination: {
+            el: '.swiper-pagination.swiper1',
+            // type: 'fraction',
+            clickable: true
+        }
+    });
+
+    mySwiper.el.onmouseover = function(){ //鼠标放上暂停轮播
+        mySwiper.autoplay.stop();
+    };
+    mySwiper.el.onmouseleave = function(){
+        mySwiper.autoplay.start();
+    };
+
+    $(".swiper-slide video").on("playing", function(){
+        console.log("playing");
+        mySwiper.autoplay.stop();
+
+    });
+
+    $(".swiper-slide video").on("pause", function(){
+        console.log("paused")
+        mySwiper.autoplay.start();
+    });
+
+    $(".content_ul.twkj li").on("click",function () {
+        go('public_xxyd_twkj_detail.html?key='+this.dataset['index'])
+    })
+
+    $(".content_ul.spkj li").on("click",function () {
+        go('public_xxyd_spkj_detail.html?key='+this.dataset['index'])
+    })
+
+
+</script>
+</body>
+
+</html>

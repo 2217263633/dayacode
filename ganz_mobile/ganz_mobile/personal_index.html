@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>个人中心</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            /*background: #fff;*/
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            /*border-bottom: 1px solid #dddddd;*/
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 0.28rem;
+            margin: 1rem 0;
+        }
+
+        .personal_val {
+            width: 7.1rem;
+            height: 4.4rem;
+            margin: 1.3rem auto 0.3rem auto;
+            border: 1px solid #dddddd;
+            box-shadow: 0 5px 6px #dddddd;
+            background: #fff;
+        }
+
+        .personal_val > div {
+            display: flex;
+        }
+
+        .personal_login {
+            font-size: 0.24rem;
+            line-height: 0.32rem;
+            width: 3.8rem;
+            height: 2.6rem;
+        }
+
+        .personal_login > div {
+            margin-top: 1rem;
+        }
+
+        body {
+            background: url(image/personal_bg_2x.png) no-repeat;
+            background-size: 7.5rem 4.4rem;
+        }
+
+        .top_item {
+            width: 2.3rem;
+            height: 1.8rem;
+            text-align: center;
+            font-size: 0.22rem;
+            line-height: 0.48rem;
+        }
+
+        .top_item img {
+            width: 0.8rem;
+            height: 0.8rem;
+            margin-top: 0.27rem;
+        }
+
+        .message_dian {
+            display: inline-block;
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 0.15rem;
+            background: #ff0000;
+            color: #fff;
+            line-height: 0.3rem;
+            font-size: 0.12rem;
+            position: absolute;
+            margin-top: 0.09rem;
+        }
+
+        .personal_list {
+            padding: 0 0.2rem;
+        }
+        .personal_item {
+            height: 1rem;
+            line-height: 1rem;
+            border-bottom: 1px solid #e6e6e6;
+            font-size: 0.24rem;
+        }
+        .personal_item img {
+            width: 0.24rem;
+            height: 0.24rem;
+            margin: 0 0.2rem 0 0.4rem;
+        }
+
+        .right {
+            margin-left: 4.9rem;
+        }
+
+        .personal_blue {
+            width: 6rem;
+            height: 1rem;
+            background: url(image/personal_blue_2x.png) no-repeat;
+            background-size: 100% 100%;
+            margin: -0.4rem auto  0 ;
+            line-height: 1rem;
+            color: #fff;
+            font-size: 0.24rem;
+        }
+        .personal_blue img {
+            width: 0.24rem;
+            height: 0.24rem;
+            margin-left: 0.6rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span>个人中心</span>
+    </div>
+
+
+    <div class="content">
+        <div class="personal_val">
+            <div>
+                <img style="width: 1.8rem;height: 1.8rem;border-radius: 0.9rem;margin: 0.4rem;"
+                     src="image/sign_background.png" alt="">
+                <div class="personal_login">
+                    <div>
+                        <span style="font-size: 0.36rem;margin-right: 0.2rem;">未登陆</span>
+                        <a href="personal_login_login.html" style="color: #1eaafd;">立即登陆</a>
+                        <br>
+                        <span style="color: #999;line-height: 0.5rem;">登陆后查看更多信息。</span>
+                    </div>
+                </div>
+                <span class="el-icon-arrow-right" style="font-size: 0.4rem;line-height: 2.6rem;"></span>
+            </div>
+
+            <div style="justify-content: space-around;border-top: 1px solid #e6e6e6;">
+                <div class="top_item" onclick="go('personal_message.html')">
+                    <img src="image/personal_xiaoxi_2x.png">
+                    <div>我的消息 <span class="message_dian">1</span></div>
+                </div>
+                <div class="top_item" onclick="go('personal_history_foot.html')">
+                    <img src="image/personal_zuji_2x.png">
+                    <div>我的足迹</div>
+                </div>
+                <div class="top_item" onclick="go('personal_wdsc.html')">
+                    <img src="image/personal_shoucang_2x.png">
+                    <div>我的收藏</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="personal_blue">
+            <img src="image/personal_banshi_2x.png" style="vertical-align: text-top;">
+            <span>我的办事进度</span>
+            <a href="personal_wdbsjd.html" style="color: #fff;float: right;margin-right: 0.6rem;">一键查询 <span class="el-icon-arrow-right"></span></a>
+        </div>
+
+        <div class="personal_list">
+            <div class="personal_item" onclick="go('personal_study.html')">
+                <span><img src="image/personal_xuexi_2x.png">我要学习</span>
+                <span class="el-icon-arrow-right right"></span>
+            </div>
+            <div class="personal_item" onclick="go('personal_leave_message.html')">
+                <span><img src="image/personal_liuyan_2x.png">我要留言</span>
+                <span class="el-icon-arrow-right right"></span>
+            </div>
+            <div class="personal_item" onclick="go('personal_wggl.html')">
+                <span><img src="image/personal_wangge_2x.png">网格管理</span>
+                <span class="el-icon-arrow-right right"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--底部fragment-->
+    <div class="fragment">
+        <div>
+            <img style="width: 0.47rem;" src="image/public_group_2x.png" alt="">
+            <div>公共服务</div>
+        </div>
+        <div>
+            <img src="image/public_dyzx_2x.png" alt="">
+            <div>党员中心</div>
+        </div>
+        <div>
+            <img style="width: 0.35rem;" src="image/public_grzx2_2x.png" alt="">
+            <div>个人中心</div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+</body>
+</html>

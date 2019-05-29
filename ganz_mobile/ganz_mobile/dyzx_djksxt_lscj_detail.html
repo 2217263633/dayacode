@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>我的成绩</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+        }
+
+        .top_value {
+            width: 7.1rem;
+            height: 3.2rem;
+            background: url("image/dyzx_djksxt_lscj_detail_chengj.png") no-repeat;
+            background-size: 100% 100%;
+            box-shadow: 0 0 0.1rem #e6e6e6;
+            position: relative;
+
+        }
+
+        .top_value .cj {
+            position: absolute;
+            margin: 0.4rem 0 0 0.36rem;
+            font-size: 0.54rem;
+            color: #1095fc;
+            font-weight: bold;
+            line-height: 0.6rem;
+        }
+
+        .top_value .top_hind {
+            position: absolute;
+            margin: 1.2rem 0 0 0.36rem;
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #333;
+        }
+
+        .value_list {
+            font-size: 0.28rem;
+            color: #333;
+            line-height: 1rem;
+        }
+
+        .value_list > div {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .answer_sheet {
+            width: 7.1rem;
+            /*height: 3.8rem;*/
+            box-shadow: 0 0 0.1rem #e6e6e6;
+        }
+        .answer_sheet_title {
+            font-size: 0.32rem;
+            color: #333;
+            line-height: 1rem;
+            text-indent: 0.4rem;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .dian {
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            background: #82d8a1;
+            vertical-align: sub;
+        }
+
+        ul.answer_sheet_ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul.answer_sheet_ul > li {
+            width: 0.6rem;
+            height: 0.6rem;
+            font-size: 0.24rem;
+            color: #fff;
+            line-height: 0.6rem;
+            text-align: center;
+            margin: 0.29rem;
+            border-radius: 0.3rem;
+            background-color: #82d8a1;
+        }
+
+        .fragment1 {
+            position: fixed;
+            display: flex;
+            justify-content: space-evenly;
+            bottom: 0;
+            background: #fff;
+            height: 1rem;
+            width: 100%;
+            border-top: 1px solid #dddddd;
+            z-index: 1000;
+            text-align: center;
+            font-size: 0.24rem;
+            color: #999;
+        }
+
+        .fragment1 img {
+            width: 0.42rem;
+            height: 0.42rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .fragment1 > div {
+            margin: auto 0;
+            width: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>我的成绩</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <div class="top_value">
+            <div class="cj">成绩：86分</div>
+            <div class="top_hind">合格/总分： 60分/100分</div>
+        </div>
+
+        <div class="value_list">
+            <div>考试时间： <span>2019.05.12 11:24:36</span></div>
+            <div>交卷时间： <span>2019.05.12 11:59:22</span></div>
+            <div>考试用时： <span>43分钟22秒</span></div>
+            <div>是否阅卷： <span>已阅</span></div>
+        </div>
+
+        <div class="answer_sheet">
+            <div class="answer_sheet_title">
+                答题卡
+                <span style="float: right;margin-right: 0.4rem;">
+                    正确 <span class="dian"></span>
+                    错误 <span class="dian" style="background: #fa8181;"></span>
+                    未做 <span class="dian" style="background: #e6e6e6;"></span>
+                </span>
+            </div>
+
+            <ul class="answer_sheet_ul">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li style="background:#e6e6e6;">4</li>
+                <li style="background:#fa8181;">5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--底部fragment-->
+    <div class="fragment1">
+        <div>
+            <img style="width: 0.47rem;" src="image/dyzx_djksxt_lscj_detail_chongxin.png" alt="">
+            <div>重新考试</div>
+        </div>
+        <div>
+            <img src="image/dyzx_djksxt_lscj_detail_fanhui.png" alt="">
+            <div>返回主界面</div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script>
+    $(".answer_sheet_ul > li ").on("click",function () {
+        go("dyzx_djksxt_lscj_detail_ct.html?key=xxx")
+    })
+</script>
+</body>
+
+</html>

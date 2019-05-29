@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>登陆账号</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .content {
+            padding: 0.2rem 0.2rem 0.6rem 0.2rem ;
+            position: absolute;
+            top: 2.74rem;
+            margin: 0 0.4rem;
+            width: 6.3rem;
+            /*height: 7rem;*/
+            background: #fff;
+            border-radius: 0.1rem;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        .login_btn {
+            width: 6rem;
+            height: 0.8rem;
+            font-size: 0.32rem;
+            line-height: 0.8rem;
+            text-align: center;
+            color: #fff;
+            background: #1eaafd;
+            border-radius: 0.1rem;
+        }
+
+        .zc_btn {
+            width: 6rem;
+            height: 0.8rem;
+            font-size: 0.32rem;
+            line-height: 0.8rem;
+            text-align: center;
+            color: #1eaafd;
+            background: #fff;
+            border-radius: 0.1rem;
+        }
+
+        .content_title {
+            font-size: 0.36rem;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.3rem;
+            text-indent: 0.3rem;
+        }
+
+        input[type=text],input[type=password] {
+            margin-left: 0;
+            background: #fff;
+            height: 1rem;
+            line-height: 1rem;
+            /*text-align: right;*/
+            width: 4.9rem;
+            color: #999;
+            border: unset;
+            text-indent: 0.2rem;
+        }
+
+        .input_box {
+            width: 6rem;
+            height: 1rem;
+            line-height: 1rem;
+            margin: auto;
+            border-bottom: 1px solid #f6f6f6;
+        }
+
+        .input_box > img {
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        #remember {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <img src="image/personal_login_pg.png" style="width: 7.5rem;height: 4.4rem;">
+    <!--内容-->
+    <div class="content">
+        <div class="content_title">账号登陆</div>
+
+        <div >
+            <div class="input_box">
+                <img src="image/personal_login_phone.png">
+                <input name="name" type="text" placeholder="请输入你的用户名/手机号">
+            </div>
+
+            <div class="input_box">
+                <img src="image/personal_login_mima.png">
+                <input name="pwd" type="password" placeholder="请输入你的密码">
+            </div>
+
+            <div class="input_box" style="border-bottom: unset;">
+                <input id="remember" type="checkbox"><label for="remember">记住密码</label>
+                <a href="personal_login_forget.html" style="float: right;color: #1eaafd;">忘记密码？</a>
+            </div>
+        </div>
+
+
+        <div style="position:absolute;bottom: 0;margin: 0 0.15rem -1.2rem 0.15rem;">
+            <div class="login_btn">登陆</div>
+            <div class="zc_btn" onclick="go('personal_login_register.html')">注册</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    $(".login_btn").on("click", function () {
+        //保存密码
+        fn();
+
+        let name = $("input[name=name]").val();
+        let pwd = $("input[name=pwd]").val();
+
+        alert("\nname:" + name + "\npwd:" + pwd)
+        window.location.href = "personal_index.html";
+
+    });
+
+
+    var user = document.getElementsByTagName("input")[0],
+        pass = document.getElementsByTagName("input")[1],
+        check = document.getElementsByTagName("input")[2],
+        loUser = localStorage.getItem("name") || "";
+    loPass = localStorage.getItem("pwd") || "";
+    user.value = loUser;
+    pass.value = loPass;
+    if(loUser !== "" && loPass !== ""){
+        check.setAttribute("checked","");
+    }
+    function fn(){
+        if(check.checked){
+            localStorage.setItem("name",user.value);
+            localStorage.setItem("pwd",pass.value);
+        }else{
+            localStorage.setItem("name","");
+            localStorage.setItem("pwd","");
+        }
+    }
+
+</script>
+</body>
+
+</html>

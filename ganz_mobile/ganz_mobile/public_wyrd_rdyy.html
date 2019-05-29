@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>我要入党</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .step {
+            text-align: center;
+            display: inline-block;
+        }
+
+        .step div {
+            display: inline-block;
+        }
+
+        .step > div {
+            margin-left: -0.12rem;
+        }
+
+        .step .baidian {
+            width: 0.12rem;
+            height: 0.12rem;
+            background: #ffffff;
+            border-radius: 0.1rem;
+            vertical-align: middle;
+        }
+
+        .step .line1 {
+            width: 1.9rem;
+            height: 0.1rem;
+            background-image: linear-gradient(to right, #3498db, #34badb);
+
+        }
+
+        .step .line2 {
+            width: 1.9rem;
+            height: 0.1rem;
+            background-image: linear-gradient(to right, #34badb, #34dbd5);
+        }
+
+        .step .line3 {
+            width: 1.9rem;
+            height: 0.1rem;
+            background-image: linear-gradient(to right, #34dbd5, #29db9a);
+        }
+
+        .dian1 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #3498db;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .dian2 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #34badb;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .dian3 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #34dbd5;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .dian4 {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #29db9a;
+            border-radius: 0.24rem;
+            float: left;
+            margin: 0.02rem -0.06rem 0 0;
+        }
+
+        .step_txt {
+            text-align: center;
+            margin-bottom: 0.2rem;
+            display: flex;
+        }
+
+        .step_txt div {
+            display: inline-block;
+            font-size: 0.28rem;
+            line-height: 0.3rem;
+        }
+
+        .txt1 {
+            margin-left: 0.2rem;
+        }
+
+        .txt2 {
+            margin-left: 0.8rem;
+        }
+
+        .txt3 {
+            margin-left: 0.9rem;
+        }
+
+        .txt4 {
+            margin-left: 0.8rem;
+        }
+
+        .top_progress {
+            margin-top: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 1px 3px #ccc;
+        }
+
+        .from_item {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #333;
+            /*border-bottom: 1px solid #f4f4f4;*/
+            padding: 0.3rem 0;
+        }
+
+        .item_title {
+            font-size: 0.32rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .item_val > span {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        input[type='text'] {
+            margin-left: 0;
+            background: #fff;
+            text-indent: 0;
+            height: 0.4rem;
+            line-height: 0.4rem;
+        }
+
+        #my_button {
+            width: 3.8rem;
+            height: 0.8rem;
+            border-radius: 0.1rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            background: #e6e6e6;
+            color: #999;
+            margin: 0.4rem auto 0;
+        }
+
+        textarea {
+            width: 6.3rem;
+            height: 6.3rem;
+            color: #000;
+            font-size: 0.24rem;
+            line-height: 0.4rem;
+            padding: 0.4rem;
+            border: unset;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>我要入党</span>
+    </div>
+
+    <div class="top_progress">
+        <div class="step_txt">
+            <div>
+                <div class="txt1" style="color: #3498db;">
+                    基本信息
+                </div>
+            </div>
+            <div>
+                <div class="txt2" style="color: #34badb;">
+                    个人经历
+                </div>
+            </div>
+            <div>
+                <div class="txt3" style="color: #34dbd5;">
+                    家庭情况
+                </div>
+            </div>
+            <div>
+                <div class="txt4" style="color: #34dbd5;">
+                    入党原因
+                </div>
+            </div>
+        </div>
+        <!-- data-i 123  表示进度，文字内容在step_txt中-->
+        <div class="step" style="text-align: center" data-i="4">
+            <div style="margin-left: 0.5rem;">
+                <div class="line1"></div>
+                <div class="dian1">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+            <div>
+                <div class="line2"></div>
+                <div class="dian2">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+            <div>
+                <div class="line3"></div>
+                <div class="dian3">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+            <div>
+                <div style="width: 0;"></div>
+                <div class="dian4">
+                    <div class="baidian"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <!--入党原因-->
+        <div class="from_item">
+            <div class="item_title">入党原因 <span style="font-size: 0.2rem;color: #999;font-weight: normal;">(包括学历)从小学填起，起止年月要衔接</span>
+            </div>
+        </div>
+
+        <textarea name="rdyy" placeholder="请输入您的入党原因"></textarea>
+
+        <div id="my_button">确认提交</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/layui-v2.4.5/layui.all.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+    let i = $(".step").get(0).dataset['i'];
+    switch (i) {
+        case "1":
+            $(".dian2").get(0).style.background = "#bdbdbd";
+            $(".dian3").get(0).style.background = "#dddddd";
+            $(".dian4").get(0).style.background = "#eee";
+
+            $(".txt2").get(0).style.color = "#bdbdbd";
+            $(".txt3").get(0).style.color = "#dddddd";
+            $(".txt4").get(0).style.color = "#dddddd";
+
+            $(".line1").get(0).style.background = "linear-gradient(to right, rgb(52, 152, 219),#bdbdbd)";
+            $(".line2").get(0).style.background = "linear-gradient(to right, #bdbdbd,#dddddd)";
+            $(".line3").get(0).style.background = "linear-gradient(to right, #dddddd,#eee)";
+            break;
+        case "2":
+            $(".dian3").get(0).style.background = "#dddddd";
+            $(".dian4").get(0).style.background = "#eee";
+
+            $(".txt3").get(0).style.color = "#dddddd";
+            $(".txt4").get(0).style.color = "#dddddd";
+
+            $(".line2").get(0).style.background = "linear-gradient(to right, #34badb,#dddddd)";
+            $(".line3").get(0).style.background = "linear-gradient(to right, #dddddd,#eee)";
+            break;
+        case "3":
+            $(".dian4").get(0).style.background = "#eee";
+            $(".txt4").get(0).style.color = "#dddddd";
+            $(".line3").get(0).style.background = "linear-gradient(to right, #34dbd5,#eee)";
+            break;
+        case "4":
+            break;
+    }
+
+    $("textarea").bind('input propertychange', button);
+
+    function button() {
+        let rdyy = $("textarea[name=rdyy]").val();
+        let DOM = $('#my_button');
+
+        if (rdyy) {
+            //不为空
+            DOM.css('background', 'linear-gradient(to left,#1095fc ,#48aefd)');
+            DOM.css('color', '#fff');
+        } else {
+            DOM.css('background', '#e6e6e6');
+            DOM.css('color', '#999');
+        }
+    }
+
+    $("#my_button").on("click", function () {
+        if ($(this).css('color') === "rgb(255, 255, 255)") {
+
+            let rdyy = $("textarea[name=rdyy]").val();
+
+            alert(rdyy)
+        } else {
+            alert('请输入详细信息');
+        }
+    })
+
+</script>
+</body>
+
+</html>

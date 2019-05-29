@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>便民服务</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="css/public.css">
+
+    <style>
+        .personal_title {
+            position: fixed;
+            top: 0;
+            color: #fff;
+            background: linear-gradient(to right, #48aefd, #1095fc);
+            height: 1rem;
+            width: 100%;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0.2rem;
+            margin: 1rem 0;
+
+        }
+
+        .module_title {
+            font-size: 0.32rem;
+            line-height: 0.45rem;
+            color: #333;
+            font-weight: bold;
+            margin-top: 0.4rem;
+        }
+
+        .module_hint {
+            font-size: 0.28rem;
+            line-height: 0.6rem;
+            color: #666666;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .nav_btn {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 7.5rem;
+            height: 1.7rem;
+            margin: 0 0 0 -0.2rem;
+        }
+
+        .nav_btn .nav_item {
+            width: 1.68rem;
+            font-size: 0.22rem;
+            line-height: 0.28rem;
+            text-align: center;
+        }
+
+        .nav_btn .nav_item img {
+            margin: 0.4rem 0 0.12rem 0;
+            width: 0.54rem;
+            height: 0.54rem;
+        }
+
+        .bsfw_btn {
+            width: 7.1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .bsfw_item {
+            width: 2.3rem;
+            height: 2.4rem;
+            text-align: center;
+            margin-top: 0.1rem;
+        }
+
+        .bsfw_item span {
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #fff;
+            margin-top: 0.8rem;
+            display: inline-block;
+        }
+
+        .bsfw_item div {
+            font-size: 0.2rem;
+            width: 1.2rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            background: linear-gradient(to left, #1095fc, #2cc2fd);
+            border-radius: 0.2rem;
+            color: #fff;
+            margin: auto;
+        }
+
+        .wgfw_val {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wgfw_val div {
+            width: 3.94rem;
+            height: 1.8rem;
+            font-size: 0.24rem;
+            line-height: 0.3rem;
+            color: #666;
+            overflow: hidden;
+        }
+
+        .wgfw_val img {
+            width: 3rem;
+            height: 1.8rem;
+        }
+
+        .sqwg_btn {
+            width: 3.8rem;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            font-size: 0.32rem;
+            color: #fff;
+            background: linear-gradient(to left, #1095fc, #48aefd);
+            text-align: center;
+            border-radius: 0.1rem;
+            margin: 0.4rem auto;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!--顶部返回栏-->
+    <div class="personal_title">
+        <span style="position: absolute;left: 0.2rem;line-height: 1rem;font-size: 0.4rem;"
+              class="el-icon-arrow-left"></span>
+        <span>便民服务</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <img style="width: 7.1rem;height: 2.8rem;" src="image/bmfw_index_banner.png" alt="">
+
+        <div class="module_title">便民查询</div>
+        <div class="nav_btn">
+            <div class="nav_item">
+                <img src="image/public_bdtcx_2x.png">
+                <div>地图查询</div>
+            </div>
+            <div class="nav_item">
+                <img src="image/public_bjqcx_2x.png">
+                <div>景区查询</div>
+            </div>
+            <div class="nav_item" onclick="go('public_bmfw_sbcx.html')">
+                <img src="image/public_bsbcx_2x.png">
+                <div>社保查询</div>
+            </div>
+            <div class="nav_item" onclick="go('public_bmfw_tel.html')">
+                <img src="image/public_bcydh_2x.png">
+                <div>常用电话</div>
+            </div>
+        </div>
+
+        <div class="module_title">办事服务</div>
+        <div class="module_hint">一站式服务流程 一件预约</div>
+        <div class="bsfw_btn">
+            <div class="bsfw_item" onclick="go('public_bmfw_dbzc.html')"
+                 style="background: url(image/bmfw_index_photo1.png) no-repeat;background-size: 100% 100%;">
+                <span>低保政策</span>
+                <div onclick="go('public_bmfw_yybs.html?key=低保政策')">立即预约</div>
+            </div>
+            <div class="bsfw_item"
+                 style="background: url(image/bmfw_index_photo2.png) no-repeat;background-size: 100% 100%;">
+                <span>惠农政策</span>
+                <div onclick="go('public_bmfw_yybs.html?key=惠农政策')">立即预约</div>
+            </div>
+            <div class="bsfw_item"
+                 style="background: url(image/bmfw_index_photo3.png) no-repeat;background-size: 100% 100%;">
+                <span>医保政策</span>
+                <div onclick="go('public_bmfw_yybs.html?key=医保政策')">立即预约</div>
+            </div>
+            <div class="bsfw_item"
+                 style="background: url(image/bmfw_index_photo4.png) no-repeat;background-size: 100% 100%;">
+                <span>社会救助政策</span>
+                <div onclick="go('public_bmfw_yybs.html?key=社会救助政策')">立即预约</div>
+            </div>
+            <div class="bsfw_item"
+                 style="background: url(image/bmfw_index_photo5.png) no-repeat;background-size: 100% 100%;">
+                <span>其他政策</span>
+                <div onclick="go('public_bmfw_yybs.html?key=其他政策')">立即预约</div>
+            </div>
+            <div class="bsfw_item"></div>
+        </div>
+
+        <div class="module_title">网格服务</div>
+        <div class="wgfw_val">
+            <div>将社区网格服务送上门,注册用户只需在线申请网格服务办事项目，网格员接单后上门服务，帮助办理服务项目，对每件事件的受理、处理、办结及反馈评价等情况都能在平台上全面反映。</div>
+            <img src="image/bmfw_index_photo6.png">
+        </div>
+        <div class="sqwg_btn" onclick="go('public_bmfw_wgfw.html')">申请网格办事服务项目</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+<script src="js/public.js"></script>
+</body>
+
+</html>
